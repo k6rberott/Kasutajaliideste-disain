@@ -50,4 +50,4 @@ Kirjutatud seminari alguses, enne arutelu.
 
 | Millal | Mis muutus | Miks |
 |---|---|---|
-| | | |
+|30.10.2026 | Oluline on leida peamine probleem | Vastasel juhul me lahendame probleemi, millest me veel teadlikud ei ole |
