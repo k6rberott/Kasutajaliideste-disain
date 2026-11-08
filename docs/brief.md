@@ -167,24 +167,85 @@ Järgmine samm: koostada prioriseeritud probleemide tabel, kus igale probleemile
 
 ## Väidete tabel
 
-| **Väide** | **Allikas** | **Liik** | **Kuidas täpsustada** |
+## Väidete tabel
+
+| Väide | Allikas | Liik | Kuidas täpsustada |
 |---|---|---|---|
-| Tunniplaanis on võimalik vaadata aineid, aegu ja ruume | tunniplaani vaatlus | allikast teadaolev | – |
-| Tunniplaanis on olemas päeva-, nädala- ja kuuvaade | tunniplaani vaatlus | allikast teadaolev | – |
-| Tunniplaanis on aine, õppejõu ja ruumi filtrid | tunniplaani vaatlus | allikast teadaolev | – |
-| Ainefiltri otsing ei tööta alati ootuspäraselt | heuristiline analüüs | allikast teadaolev | testida erinevate otsingusõnadega |
-| Filtri sulgemisel võib lisanduda soovimatu valik | heuristiline analüüs | allikast teadaolev | korrata probleemi kasutatavuse testis |
-| Tunniplaani kuuvaade võib olla liiga pikk ja raskesti jälgitav | heuristiline analüüs | eksperdi hinnang | testida kasutajatega |
-| Kasutajal on raske aru saada, milline vaade on aktiivne | heuristiline analüüs | eksperdi hinnang | testida vaate valimise ülesandega |
-| Tunniplaani read on visuaalselt raskesti eristatavad | heuristiline analüüs | eksperdi hinnang | võrrelda erinevaid visuaalseid lahendusi |
-| Kasutajad soovivad kursusi värvide järgi eristada | oma kogemus | eeldus | küsida õppuritelt |
-| Tunniplaani kasutatakse peamiselt mobiiltelefonis | oma kogemus | eeldus | küsida õppuritelt ja õppejõududelt |
-| Õppurid vajavad kiiret ülevaadet järgmise tunni ajast ja ruumist | UX-analüüs | eeldus | teha kasutajaintervjuusid |
-| Tunnile vajutades peaks avanema detailne info | UX-analüüs | disainiidee | testida prototüübiga |
-| Tunniplaan võiks sisaldada kodutööde tähtaegu | kasutaja ettepanek | disainiidee | uurida õppurite vajadusi |
-| Tunniplaan võiks toetada Google'i, Apple'i ja Outlooki kalendreid | kasutaja ettepanek | disainiidee | uurida kalendrite kasutamist |
-| Kasutajad soovivad tunniplaani jagada või järjehoidjasse lisada | heuristiline analüüs | eeldus | küsida õppuritelt |
-| Tunniplaani värvide ja tekstisuuruse muutmine parandaks kasutatavust | UX-analüüs | eeldus | testida prototüübiga |
-| Tunniplaan peab vastama WCAG 2.2 AA nõuetele | projekti piirang | nõue | kontrollida ligipääsetavuse auditiga |
-| Moodle'i ja ÕIS-i lingid tunniplaani detailvaates oleksid kasulikud | kasutaja ettepanek | disainiidee | küsida õppuritelt |
-| Tänase päeva vaade peaks olema tunniplaani avaleht | UX-analüüs | disainiotsus | testida prototüübiga |
+| Tunniplaani kursused ei ole värvide järgi eristatud. | Tunniplaani vaatlus [4] | allikast teadaolev | – |
+| Tunniplaani tekst on väike ja sama suurusega päeva-, nädala- ja kuuvaates. | Tunniplaani vaatlus | allikast teadaolev | – |
+| Ainefiltri otsing võimaldab otsida aine nimetuse järgi. | Tunniplaani vaatlus | allikast teadaolev | – |
+| Ainefiltri otsing ei kuva sisestatud teksti visuaalselt. | Tunniplaani vaatlus | allikast teadaolev | – |
+| Ainefiltri otsing võib aeglase sisestamise korral anda vale tulemuse. | Tunniplaani vaatlus | allikast teadaolev | Korrata otsingut erineva sisestamiskiirusega |
+| Filtri sulgemisel lisatakse valimata nimi filtrisse. | Tunniplaani vaatlus | allikast teadaolev | Kontrollida filtri käitumist |
+| Õppejõu filtris esineb sarnane otsingu- ja valikuprobleem. | Tunniplaani vaatlus | allikast teadaolev | Kontrollida filtri käitumist |
+| Kuu vaade ilma filtrita kuvab väga pika tabeli. | Tunniplaani vaatlus | allikast teadaolev | – |
+| Kuupäeva kohal oleva checkbox'i funktsioon ei ole arusaadav. | Tunniplaani vaatlus | allikast teadaolev | – |
+| Tunniplaani tabeli päis ei joondu alumise tabeliga. | Tunniplaani vaatlus | allikast teadaolev | – |
+| Vaatevaliku nuppudel puudub aktiivse valiku visuaalne indikaator. | Tunniplaani vaatlus | allikast teadaolev | – |
+| Tunniplaani tabeli read on ühevärvilised ja raskesti eristatavad. | Tunniplaani vaatlus | allikast teadaolev | – |
+| Tunniplaani sihtrühm ei ole kasutajale selgelt määratletud. | Tunniplaani vaatlus | allikast teadaolev | Uurida tunniplaani sihtrühma |
+| Kuuvaate loogika ei vasta alati kalendrikuule. | Tunniplaani vaatlus | allikast teadaolev | Kontrollida erinevaid kuupäevavalikuid |
+| Tunniplaani vaadet ei saa järjehoidjasse lisada, jagada ega uues vahelehes avada. | Tunniplaani vaatlus | allikast teadaolev | – |
+| Ekraanilugeja käsitleb nuppe linkidena. | Tunniplaani vaatlus | allikast teadaolev | Testida erinevate ekraanilugejatega |
+| Lühendite KTD, KVÜ, LO ja RIF tähendused ei ole ilma hiirega vihjet avamata nähtavad. | Tunniplaani vaatlus | allikast teadaolev | – |
+| Ruumide nimekirjas on segamini füüsilised ruumid, platvormid ja asukohad. | Tunniplaani vaatlus | allikast teadaolev | – |
+| Ruumide nimetamise loogika on ebaühtlane ja osa nimesid on kärbitud. | Tunniplaani vaatlus | allikast teadaolev | – |
+| Kuupäevamuudatused rakenduvad alles pärast „Otsi“ vajutamist. | Tunniplaani vaatlus | allikast teadaolev | – |
+| „Kuni“ kõrval oleva checkbox'i eemaldamine muudab otsingu loogikat. | Tunniplaani vaatlus | allikast teadaolev | – |
+| Tunniplaani põhilehel puudub h1-pealkiri ja selge struktuur. | Tunniplaani vaatlus | allikast teadaolev | – |
+| Start-linkide pildil puudub alt-tekst. | Tunniplaani vaatlus | allikast teadaolev | Kontrollida HTML-i ja ekraanilugejaga |
+| Tööriistaribal kasutatakse ainult ikoone, ilma tekstiliste siltideta. | Tunniplaani vaatlus | allikast teadaolev | – |
+| Abiinfo on peidetud title-vihjetesse, mis ilmuvad hiirega liikudes. | Tunniplaani vaatlus | allikast teadaolev | Kontrollida klaviatuuri ja mobiili kasutust |
+| Teemavahetuse nupp ei ole visuaalselt selgelt nupuna äratuntav. | Tunniplaani vaatlus | allikast teadaolev | – |
+| Tunniplaan võiks sisaldada kodutööde tähtaegu. | Kasutaja ettepanek | disainiidee | Küsida teistelt õppuritelt |
+| Kodutööde tähtajad võiks olla kasutaja poolt lisatavad. | Kasutaja ettepanek | disainiidee | Uurida vajadust ja tehnilisi võimalusi |
+| Tunnile vajutades võiks avaneda detailne infoaken. | Kasutaja ettepanek | disainiidee | Testida prototüübiga |
+| Detailvaates võiks näha aine järgmisi toimumisaegu. | Kasutaja ettepanek | disainiidee | Uurida andmete kättesaadavust |
+| Kuuvaade võiks olla Google Calendari laadne. | Kasutaja ettepanek | disainiidee | Testida alternatiivseid kuuvaateid |
+| Tunni detailvaates võiks olla Moodle'i ja ÕIS-i ainekaardi lingid. | Kasutaja ettepanek | disainiidee | Uurida linkide kättesaadavust |
+| Tunniplaan võiks toetada Google'i, iOS-i ja Outlooki kalendreid. | Kasutaja ettepanek | disainiidee | Uurida kalendrite integreerimise võimalusi |
+
+## 5 kõige olulisemat heuristikute analüüsi tähelepanekut
+
+| Väide | Allikas | Liik | Kuidas täpsustada |
+|---|---|---|---|
+| Kasutaja ei näe selgelt, milline tunniplaani vaade (päev, nädal, kuu) on aktiivne. | Heuristikute analüüs[1] | Probleem | Aktiivne vaade peaks olema visuaalselt selgelt eristatud. |
+| Ruumide loendis on segamini füüsilised ruumid, veebiplatvormid ja muud asukohad. | Heuristikute analüüs[1] | Probleem | Ruumide ja asukohtade nimetused ning kategooriad tuleks muuta ühtseks ja arusaadavaks. |
+| Filtri sulgemisel võib õpetaja nimi lisanduda ka siis, kui kasutaja seda ei valinud. | Heuristikute analüüs[1] | Probleem | Filtri valimine ja rakendamine peaks olema kasutaja kontrolli all ning valimata filtreid ei tohiks rakendada. |
+| Tunniplaani värvid, nimetused ja ruumide kirjapilt ei ole järjepidevad. | Heuristikute analüüs[1] | Probleem | Kasutada ühtset värvi-, nimetamis- ja vormindussüsteemi. |
+| Tunniplaani tekst on väike ning kursused pole piisavalt eristatavad. | Heuristikute analüüs[1] | Probleem | Suurendada teksti loetavust ning eristada kursusi värvi või muu visuaalse tunnuse abil. |
+
+## Allikad
+
+### UX ja kasutatavus
+
+1. Nielsen Norman Group. *10 Usability Heuristics for User Interface Design.*
+   - https://www.nngroup.com/articles/ten-usability-heuristics/
+   - https://github.com/tluhk/kasutajaliideste-disain/blob/main/materjalid/01-10-jn-heuristikut.md
+
+   Kasutatud heuristilise analüüsi ja kasutatavuse põhimõtete põhjendamiseks.
+
+### Ligipääsetavus
+
+2. W3C. *Web Content Accessibility Guidelines (WCAG) 2.2.*
+   https://www.w3.org/TR/WCAG/
+
+   Kasutatud ligipääsetavuse nõuete, sh kontrastsuse, klaviatuuriga
+   navigeerimise ja kasutajaliidese komponentide hindamiseks.
+
+3. W3C Web Accessibility Initiative. *WCAG 2 Overview.*
+   https://www.w3.org/WAI/standards-guidelines/wcag/
+
+   Kasutatud WCAG standardi ja selle versioonide selgitamiseks.
+
+### Tunniplaani vaatlus
+
+4. Tallinna Ülikooli Haapsalu kolledži tunniplaan
+   https://start.hk.tlu.ee/sahtelbeta/tunniplaan/index.php
+
+   Kasutatud analüüsiks ja kuvatõmmiste tegemiseks.
+
+## Viidete kasutamine
+
+Allikatele viidatakse tekstis numbriliselt, näiteks [1], [2].
+

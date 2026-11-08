@@ -18,6 +18,7 @@ Haapsalu kolledži tunniplaani uus kasutajaliides. Kursuse "Kasutajaliideste dis
 
 ## Reeglid
 - Kasuta päris tunniplaani andmeid, mitte välja mõeldud tunde. Kui sa andmeid ei näe, ütle seda.
+- Tunniplaan on aadressil https://start.hk.tlu.ee/sahtelbeta/tunniplaan/index.php
 - Ära lisa funktsioone, mida lähteülesanne ei nõua.
 - Ligipääsetavus: WCAG 2.2 AA (kontrast, klaviatuur, semantiline HTML).
 - Koodis on nimed (klassid, muutujad, failid) inglise keeles, kasutajale nähtav tekst eesti keeles.
