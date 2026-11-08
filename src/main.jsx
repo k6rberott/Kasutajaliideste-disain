@@ -56,11 +56,13 @@ const scheduleDays = [
 
 function App() {
   return (
-    <main className="app-shell">
-      <div className="schedule-view">
-        <header className="page-header">
-          <p className="eyebrow">Haapsalu kolledž</p>
-          <h1>Tunniplaan</h1>
+    <main className="directions-canvas">
+      <h1 className="visually-hidden">Tunniplaani vaatesuunad</h1>
+
+      <section className="schedule-frame" aria-labelledby="previous-view-title">
+        <header className="schedule-header">
+          <p className="schedule-eyebrow">Haapsalu kolledž</p>
+          <h2 id="previous-view-title">Tunniplaan</h2>
           <div className="schedule-context" aria-label="Tunniplaani valik">
             <p>
               <span>Rühm</span>
@@ -73,25 +75,21 @@ function App() {
           </div>
         </header>
 
-        <section className="week-schedule" aria-labelledby="week-heading">
-          <h2 id="week-heading" className="visually-hidden">
-            46. nädala tunnid
-          </h2>
-
+        <section className="schedule-week" aria-label="46. nädala tunnid">
           {scheduleDays.map((day) => (
-            <section className="schedule-day" key={day.date}>
-              <header className="day-header">
+            <section className="schedule-day" key={`previous-${day.date}`}>
+              <header>
                 <h3>{day.weekday}</h3>
                 <time dateTime={day.date}>{day.displayDate}</time>
               </header>
 
-              <div className="lesson-list">
+              <div className="schedule-lessons">
                 {day.lessons.map((lesson) => (
                   <article
-                    className="lesson-card"
-                    key={`${day.date}-${lesson.startTime}`}
+                    className="schedule-lesson-card"
+                    key={`previous-${day.date}-${lesson.startTime}`}
                   >
-                    <p className="lesson-time">
+                    <p className="schedule-lesson-time">
                       <time dateTime={`${day.date}T${lesson.startTime}`}>
                         {lesson.startTime}
                       </time>
@@ -100,9 +98,9 @@ function App() {
                         {lesson.endTime}
                       </time>
                     </p>
-                    <div className="lesson-details">
+                    <div className="schedule-lesson-details">
                       <h4>{lesson.title}</h4>
-                      <p className="course-code">{lesson.courseCode}</p>
+                      <p>{lesson.courseCode}</p>
                       <dl>
                         <div>
                           <dt>Õppejõud</dt>
@@ -120,7 +118,71 @@ function App() {
             </section>
           ))}
         </section>
-      </div>
+      </section>
+
+      <section className="mobile-frame" aria-labelledby="current-view-title">
+        <header className="mobile-header">
+          <p>Haapsalu kolledž</p>
+          <h2 id="current-view-title">Tunniplaan</h2>
+          <dl>
+            <div>
+              <dt>Rühm</dt>
+              <dd>RIF 2</dd>
+            </div>
+            <div>
+              <dt>Nädal</dt>
+              <dd>09.–15. november 2026</dd>
+            </div>
+          </dl>
+        </header>
+
+        <section className="mobile-week" aria-label="46. nädala tunnid">
+          {scheduleDays.map((day) => (
+            <section
+              className="mobile-day"
+              aria-labelledby={`day-${day.date}`}
+              key={day.date}
+            >
+              <header>
+                <h3 id={`day-${day.date}`}>{day.weekday}</h3>
+                <time dateTime={day.date}>{day.displayDate}</time>
+              </header>
+
+              <div className="mobile-lessons">
+                {day.lessons.map((lesson) => (
+                  <article
+                    className="mobile-lesson-card"
+                    key={`${day.date}-${lesson.startTime}`}
+                  >
+                    <p className="mobile-lesson-time">
+                      <time dateTime={`${day.date}T${lesson.startTime}`}>
+                        {lesson.startTime}
+                      </time>
+                      <time dateTime={`${day.date}T${lesson.endTime}`}>
+                        {lesson.endTime}
+                      </time>
+                    </p>
+                    <div>
+                      <h4>{lesson.title}</h4>
+                      <p>{lesson.courseCode}</p>
+                      <dl>
+                        <div>
+                          <dt>Õppejõud</dt>
+                          <dd>{lesson.lecturer}</dd>
+                        </div>
+                        <div>
+                          <dt>Asukoht</dt>
+                          <dd>Ei ole allikas näidatud</dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
+          ))}
+        </section>
+      </section>
     </main>
   );
 }
