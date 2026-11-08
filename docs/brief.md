@@ -171,15 +171,15 @@ Järgmine samm: koostada prioriseeritud probleemide tabel, kus igale probleemile
 
 | Nr | Väide | Allikas | Liik | Kuidas täpsustada |
 |---|---|---|---|---|
-| 1 | Tunniplaani kursused ei ole värvide järgi eristatud. | Tunniplaani vaatlus [4] | allikast teadaolev | – |
-| 2 | Tunniplaani tekst on väike ja sama suurusega päeva-, nädala- ja kuuvaates. | Tunniplaani vaatlus | allikast teadaolev | – |
-| 3 | Ainefiltri otsing võimaldab otsida aine nimetuse järgi. | Tunniplaani vaatlus | allikast teadaolev | – |
-| 4 | Ainefiltri otsing ei kuva sisestatud teksti visuaalselt. | Tunniplaani vaatlus | allikast teadaolev | – |
-| 5 | Ainefiltri otsing võib aeglase sisestamise korral anda vale tulemuse. | Tunniplaani vaatlus | allikast teadaolev | Korrata otsingut erineva sisestamiskiirusega |
-| 6 | Filtri sulgemisel lisatakse valimata nimi filtrisse. | Tunniplaani vaatlus | allikast teadaolev | Kontrollida filtri käitumist |
-| 7 | Õppejõu filtris esineb sarnane otsingu- ja valikuprobleem. | Tunniplaani vaatlus | allikast teadaolev | Kontrollida filtri käitumist |
-| 8 | Kuu vaade ilma filtrita kuvab väga pika tabeli. | Tunniplaani vaatlus | allikast teadaolev | – |
-| 9 | Kuupäeva kohal oleva checkbox'i funktsioon ei ole arusaadav. | Tunniplaani vaatlus | allikast teadaolev | – |
+| 1 | Tunniplaani kursused ei ole värvide järgi eristatud. | Tunniplaani vaatlus [3] | allikast teadaolev | – |
+| 2 | Tunniplaani tekst on väike ja sama suurusega päeva-, nädala- ja kuuvaates. | Tunniplaani vaatlus [3] | allikast teadaolev | – |
+| 3 | Ainefiltri otsing võimaldab otsida aine nimetuse järgi. | Tunniplaani vaatlus [3] | allikast teadaolev | – |
+| 4 | Ainefiltri otsing ei kuva sisestatud teksti visuaalselt. | Tunniplaani vaatlus [3] | allikast teadaolev | – |
+| 5 | Ainefiltri otsing võib aeglase sisestamise korral anda vale tulemuse. | Tunniplaani vaatlus [3] | allikast teadaolev | Korrata otsingut erineva sisestamiskiirusega |
+| 6 | Filtri sulgemisel lisatakse valimata nimi filtrisse. | Tunniplaani vaatlus [3] | allikast teadaolev | Kontrollida filtri käitumist |
+| 7 | Õppejõu filtris esineb sarnane otsingu- ja valikuprobleem. | Tunniplaani vaatlus [3] | allikast teadaolev | Kontrollida filtri käitumist |
+| 8 | Kuu vaade ilma filtrita kuvab väga pika tabeli. [3] | Tunniplaani vaatlus | allikast teadaolev | – |
+| 9 | Kuupäeva kohal oleva checkbox'i funktsioon ei ole arusaadav. [3] | Tunniplaani vaatlus | allikast teadaolev | – |
 | 10 | Tunniplaani tabeli päis ei joondu alumise tabeliga. | Tunniplaani vaatlus | allikast teadaolev | – |
 | 11 | Vaatevaliku nuppudel puudub aktiivse valiku visuaalne indikaator. | Tunniplaani vaatlus | allikast teadaolev | – |
 | 12 | Tunniplaani tabeli read on ühevärvilised ja raskesti eristatavad. | Tunniplaani vaatlus | allikast teadaolev | – |
@@ -233,14 +233,9 @@ Järgmine samm: koostada prioriseeritud probleemide tabel, kus igale probleemile
    Kasutatud ligipääsetavuse nõuete, sh kontrastsuse, klaviatuuriga
    navigeerimise ja kasutajaliidese komponentide hindamiseks.
 
-3. W3C Web Accessibility Initiative. *WCAG 2 Overview.*
-   https://www.w3.org/WAI/standards-guidelines/wcag/
-
-   Kasutatud WCAG standardi ja selle versioonide selgitamiseks.
-
 ### Tunniplaani vaatlus
 
-4. Tallinna Ülikooli Haapsalu kolledži tunniplaan
+3. Tallinna Ülikooli Haapsalu kolledži tunniplaan
    https://start.hk.tlu.ee/sahtelbeta/tunniplaan/index.php
 
    Kasutatud analüüsiks ja kuvatõmmiste tegemiseks. Kuvatõmmised on leitavad koos selgitustega [Figmas](https://www.figma.com/design/BLAGRRcDs6hnZ53Ovv4rfU/Tunniplaan---Indrek?node-id=3-2&t=S3TE8KkLJome9InT-1).
