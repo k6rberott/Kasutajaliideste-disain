@@ -235,7 +235,7 @@ Järgmine samm: koostada prioriseeritud probleemide tabel, kus igale probleemile
 3. WebAIM. *WAVE Web Accessibility Evaluation Tool.*
    https://wave.webaim.org/
 
-   Kasutatud tunniplaani veebilehe automaatseks ligipääsetavuse kontrollimiseks.
+   Kasutatud tunniplaani veebilehe automaatseks ligipääsetavuse, sh kontrastsuse kontrollimiseks.
 
 ### Tunniplaani vaatlus
 
