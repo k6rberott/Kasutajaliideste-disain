@@ -169,41 +169,41 @@ Järgmine samm: koostada prioriseeritud probleemide tabel, kus igale probleemile
 
 ## Väidete tabel
 
-| Väide | Allikas | Liik | Kuidas täpsustada |
-|---|---|---|---|
-| Tunniplaani kursused ei ole värvide järgi eristatud. | Tunniplaani vaatlus [4] | allikast teadaolev | – |
-| Tunniplaani tekst on väike ja sama suurusega päeva-, nädala- ja kuuvaates. | Tunniplaani vaatlus | allikast teadaolev | – |
-| Ainefiltri otsing võimaldab otsida aine nimetuse järgi. | Tunniplaani vaatlus | allikast teadaolev | – |
-| Ainefiltri otsing ei kuva sisestatud teksti visuaalselt. | Tunniplaani vaatlus | allikast teadaolev | – |
-| Ainefiltri otsing võib aeglase sisestamise korral anda vale tulemuse. | Tunniplaani vaatlus | allikast teadaolev | Korrata otsingut erineva sisestamiskiirusega |
-| Filtri sulgemisel lisatakse valimata nimi filtrisse. | Tunniplaani vaatlus | allikast teadaolev | Kontrollida filtri käitumist |
-| Õppejõu filtris esineb sarnane otsingu- ja valikuprobleem. | Tunniplaani vaatlus | allikast teadaolev | Kontrollida filtri käitumist |
-| Kuu vaade ilma filtrita kuvab väga pika tabeli. | Tunniplaani vaatlus | allikast teadaolev | – |
-| Kuupäeva kohal oleva checkbox'i funktsioon ei ole arusaadav. | Tunniplaani vaatlus | allikast teadaolev | – |
-| Tunniplaani tabeli päis ei joondu alumise tabeliga. | Tunniplaani vaatlus | allikast teadaolev | – |
-| Vaatevaliku nuppudel puudub aktiivse valiku visuaalne indikaator. | Tunniplaani vaatlus | allikast teadaolev | – |
-| Tunniplaani tabeli read on ühevärvilised ja raskesti eristatavad. | Tunniplaani vaatlus | allikast teadaolev | – |
-| Tunniplaani sihtrühm ei ole kasutajale selgelt määratletud. | Tunniplaani vaatlus | allikast teadaolev | Uurida tunniplaani sihtrühma |
-| Kuuvaate loogika ei vasta alati kalendrikuule. | Tunniplaani vaatlus | allikast teadaolev | Kontrollida erinevaid kuupäevavalikuid |
-| Tunniplaani vaadet ei saa järjehoidjasse lisada, jagada ega uues vahelehes avada. | Tunniplaani vaatlus | allikast teadaolev | – |
-| Ekraanilugeja käsitleb nuppe linkidena. | Tunniplaani vaatlus | allikast teadaolev | Testida erinevate ekraanilugejatega |
-| Lühendite KTD, KVÜ, LO ja RIF tähendused ei ole ilma hiirega vihjet avamata nähtavad. | Tunniplaani vaatlus | allikast teadaolev | – |
-| Ruumide nimekirjas on segamini füüsilised ruumid, platvormid ja asukohad. | Tunniplaani vaatlus | allikast teadaolev | – |
-| Ruumide nimetamise loogika on ebaühtlane ja osa nimesid on kärbitud. | Tunniplaani vaatlus | allikast teadaolev | – |
-| Kuupäevamuudatused rakenduvad alles pärast „Otsi“ vajutamist. | Tunniplaani vaatlus | allikast teadaolev | – |
-| „Kuni“ kõrval oleva checkbox'i eemaldamine muudab otsingu loogikat. | Tunniplaani vaatlus | allikast teadaolev | – |
-| Tunniplaani põhilehel puudub h1-pealkiri ja selge struktuur. | Tunniplaani vaatlus | allikast teadaolev | – |
-| Start-linkide pildil puudub alt-tekst. | Tunniplaani vaatlus | allikast teadaolev | Kontrollida HTML-i ja ekraanilugejaga |
-| Tööriistaribal kasutatakse ainult ikoone, ilma tekstiliste siltideta. | Tunniplaani vaatlus | allikast teadaolev | – |
-| Abiinfo on peidetud title-vihjetesse, mis ilmuvad hiirega liikudes. | Tunniplaani vaatlus | allikast teadaolev | Kontrollida klaviatuuri ja mobiili kasutust |
-| Teemavahetuse nupp ei ole visuaalselt selgelt nupuna äratuntav. | Tunniplaani vaatlus | allikast teadaolev | – |
-| Tunniplaan võiks sisaldada kodutööde tähtaegu. | Kasutaja ettepanek | disainiidee | Küsida teistelt õppuritelt |
-| Kodutööde tähtajad võiks olla kasutaja poolt lisatavad. | Kasutaja ettepanek | disainiidee | Uurida vajadust ja tehnilisi võimalusi |
-| Tunnile vajutades võiks avaneda detailne infoaken. | Kasutaja ettepanek | disainiidee | Testida prototüübiga |
-| Detailvaates võiks näha aine järgmisi toimumisaegu. | Kasutaja ettepanek | disainiidee | Uurida andmete kättesaadavust |
-| Kuuvaade võiks olla Google Calendari laadne. | Kasutaja ettepanek | disainiidee | Testida alternatiivseid kuuvaateid |
-| Tunni detailvaates võiks olla Moodle'i ja ÕIS-i ainekaardi lingid. | Kasutaja ettepanek | disainiidee | Uurida linkide kättesaadavust |
-| Tunniplaan võiks toetada Google'i, iOS-i ja Outlooki kalendreid. | Kasutaja ettepanek | disainiidee | Uurida kalendrite integreerimise võimalusi |
+| Nr | Väide | Allikas | Liik | Kuidas täpsustada |
+|---|---|---|---|---|
+| 1 | Tunniplaani kursused ei ole värvide järgi eristatud. | Tunniplaani vaatlus [4] | allikast teadaolev | – |
+| 2 | Tunniplaani tekst on väike ja sama suurusega päeva-, nädala- ja kuuvaates. | Tunniplaani vaatlus | allikast teadaolev | – |
+| 3 | Ainefiltri otsing võimaldab otsida aine nimetuse järgi. | Tunniplaani vaatlus | allikast teadaolev | – |
+| 4 | Ainefiltri otsing ei kuva sisestatud teksti visuaalselt. | Tunniplaani vaatlus | allikast teadaolev | – |
+| 5 | Ainefiltri otsing võib aeglase sisestamise korral anda vale tulemuse. | Tunniplaani vaatlus | allikast teadaolev | Korrata otsingut erineva sisestamiskiirusega |
+| 6 | Filtri sulgemisel lisatakse valimata nimi filtrisse. | Tunniplaani vaatlus | allikast teadaolev | Kontrollida filtri käitumist |
+| 7 | Õppejõu filtris esineb sarnane otsingu- ja valikuprobleem. | Tunniplaani vaatlus | allikast teadaolev | Kontrollida filtri käitumist |
+| 8 | Kuu vaade ilma filtrita kuvab väga pika tabeli. | Tunniplaani vaatlus | allikast teadaolev | – |
+| 9 | Kuupäeva kohal oleva checkbox'i funktsioon ei ole arusaadav. | Tunniplaani vaatlus | allikast teadaolev | – |
+| 10 | Tunniplaani tabeli päis ei joondu alumise tabeliga. | Tunniplaani vaatlus | allikast teadaolev | – |
+| 11 | Vaatevaliku nuppudel puudub aktiivse valiku visuaalne indikaator. | Tunniplaani vaatlus | allikast teadaolev | – |
+| 12 | Tunniplaani tabeli read on ühevärvilised ja raskesti eristatavad. | Tunniplaani vaatlus | allikast teadaolev | – |
+| 13 | Tunniplaani sihtrühm ei ole kasutajale selgelt määratletud. | Tunniplaani vaatlus | allikast teadaolev | Uurida tunniplaani sihtrühma |
+| 14 | Kuuvaate loogika ei vasta alati kalendrikuule. | Tunniplaani vaatlus | allikast teadaolev | Kontrollida erinevaid kuupäevavalikuid |
+| 15 | Tunniplaani vaadet ei saa järjehoidjasse lisada, jagada ega uues vahelehes avada. | Tunniplaani vaatlus | allikast teadaolev | – |
+| 16 | Ekraanilugeja käsitleb nuppe linkidena. | Tunniplaani vaatlus | allikast teadaolev | Testida erinevate ekraanilugejatega |
+| 17 | Lühendite KTD, KVÜ, LO ja RIF tähendused ei ole ilma hiirega vihjet avamata nähtavad. | Tunniplaani vaatlus | allikast teadaolev | – |
+| 18 | Ruumide nimekirjas on segamini füüsilised ruumid, platvormid ja asukohad. | Tunniplaani vaatlus | allikast teadaolev | – |
+| 19 | Ruumide nimetamise loogika on ebaühtlane ja osa nimesid on kärbitud. | Tunniplaani vaatlus | allikast teadaolev | – |
+| 20 | Kuupäevamuudatused rakenduvad alles pärast „Otsi“ vajutamist. | Tunniplaani vaatlus | allikast teadaolev | – |
+| 21 | „Kuni“ kõrval oleva checkbox'i eemaldamine muudab otsingu loogikat. | Tunniplaani vaatlus | allikast teadaolev | – |
+| 22 | Tunniplaani põhilehel puudub h1-pealkiri ja selge struktuur. | Tunniplaani vaatlus | allikast teadaolev | – |
+| 23 | Start-linkide pildil puudub alt-tekst. | Tunniplaani vaatlus | allikast teadaolev | Kontrollida HTML-i ja ekraanilugejaga |
+| 24 | Tööriistaribal kasutatakse ainult ikoone, ilma tekstiliste siltideta. | Tunniplaani vaatlus | allikast teadaolev | – |
+| 25 | Abiinfo on peidetud title-vihjetesse, mis ilmuvad hiirega liikudes. | Tunniplaani vaatlus | allikast teadaolev | Kontrollida klaviatuuri ja mobiili kasutust |
+| 26 | Teemavahetuse nupp ei ole visuaalselt selgelt nupuna äratuntav. | Tunniplaani vaatlus | allikast teadaolev | – |
+| 27 | Tunniplaan võiks sisaldada kodutööde tähtaegu. | Kasutaja ettepanek | disainiidee | Küsida teistelt õppuritelt |
+| 28 | Kodutööde tähtajad võiks olla kasutaja poolt lisatavad. | Kasutaja ettepanek | disainiidee | Uurida vajadust ja tehnilisi võimalusi |
+| 29 | Tunnile vajutades võiks avaneda detailne infoaken. | Kasutaja ettepanek | disainiidee | Testida prototüübiga |
+| 30 | Detailvaates võiks näha aine järgmisi toimumisaegu. | Kasutaja ettepanek | disainiidee | Uurida andmete kättesaadavust |
+| 31 | Kuuvaade võiks olla Google Calendari laadne. | Kasutaja ettepanek | disainiidee | Testida alternatiivseid kuuvaateid |
+| 32 | Tunni detailvaates võiks olla Moodle'i ja ÕIS-i ainekaardi lingid. | Kasutaja ettepanek | disainiidee | Uurida linkide kättesaadavust |
+| 33 | Tunniplaan võiks toetada Google'i, iOS-i ja Outlooki kalendreid. | Kasutaja ettepanek | disainiidee | Uurida kalendrite integreerimise võimalusi |
 
 ## 5 kõige olulisemat heuristikute analüüsi tähelepanekut
 
@@ -243,7 +243,7 @@ Järgmine samm: koostada prioriseeritud probleemide tabel, kus igale probleemile
 4. Tallinna Ülikooli Haapsalu kolledži tunniplaan
    https://start.hk.tlu.ee/sahtelbeta/tunniplaan/index.php
 
-   Kasutatud analüüsiks ja kuvatõmmiste tegemiseks.
+   Kasutatud analüüsiks ja kuvatõmmiste tegemiseks. Kuvatõmmised on leitavad koos selgitustega [Figmas](https://www.figma.com/design/BLAGRRcDs6hnZ53Ovv4rfU/Tunniplaan---Indrek?node-id=3-2&t=S3TE8KkLJome9InT-1).
 
 ## Viidete kasutamine
 
