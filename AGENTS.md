@@ -1,4 +1,4 @@
-# Tunniplaan – [sinu nimi]
+# Tunniplaan – Indrek
 
 Haapsalu kolledži tunniplaani uus kasutajaliides. Kursuse "Kasutajaliideste disain" projekt.
 
