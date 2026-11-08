@@ -180,7 +180,7 @@ Järgmine samm: koostada prioriseeritud probleemide tabel, kus igale probleemile
 | 7 | Õppejõu filtris esineb sarnane otsingu- ja valikuprobleem. | Tunniplaani vaatlus [3] | allikast teadaolev | Kontrollida filtri käitumist |
 | 8 | Kuu vaade ilma filtrita kuvab väga pika tabeli. [3] | Tunniplaani vaatlus | allikast teadaolev | – |
 | 9 | Kuupäeva kohal oleva checkbox'i funktsioon ei ole arusaadav. [3] | Tunniplaani vaatlus | allikast teadaolev | – |
-| 10 | Tunniplaani tabeli päis ei joondu alumise tabeliga. | Tunniplaani vaatlus | allikast teadaolev | – |
+| 10 | Tunniplaani tabeli päis ei joondu alumise tabeliga. [3] | Tunniplaani vaatlus | allikast teadaolev | – |
 | 11 | Vaatevaliku nuppudel puudub aktiivse valiku visuaalne indikaator. | Tunniplaani vaatlus | allikast teadaolev | – |
 | 12 | Tunniplaani tabeli read on ühevärvilised ja raskesti eristatavad. | Tunniplaani vaatlus | allikast teadaolev | – |
 | 13 | Tunniplaani sihtrühm ei ole kasutajale selgelt määratletud. | Tunniplaani vaatlus | allikast teadaolev | Uurida tunniplaani sihtrühma |
@@ -238,7 +238,7 @@ Järgmine samm: koostada prioriseeritud probleemide tabel, kus igale probleemile
 3. Tallinna Ülikooli Haapsalu kolledži tunniplaan
    https://start.hk.tlu.ee/sahtelbeta/tunniplaan/index.php
 
-   Kasutatud analüüsiks ja kuvatõmmiste tegemiseks. Kuvatõmmised on leitavad koos selgitustega [Figmas](https://www.figma.com/design/BLAGRRcDs6hnZ53Ovv4rfU/Tunniplaan---Indrek?node-id=3-2&t=S3TE8KkLJome9InT-1).
+   Kasutatud analüüsiks ja kuvatõmmiste tegemiseks. Kuvatõmmised on leitavad koos selgitustega [Figmas](https://www.figma.com/design/BLAGRRcDs6hnZ53Ovv4rfU/Tunniplaan---Indrek?node-id=3-2&t=S3TE8KkLJome9InT-1). Frame-i numbrid on väite numbrid.
 
 ## Viidete kasutamine
 
