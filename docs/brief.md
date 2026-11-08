@@ -186,13 +186,13 @@ Järgmine samm: koostada prioriseeritud probleemide tabel, kus igale probleemile
 | 13 | Tunniplaani sihtrühm ei ole kasutajale selgelt määratletud. | Tunniplaani vaatlus [4] | allikast teadaolev | Uurida tunniplaani sihtrühma |
 | 14 | Kuuvaate loogika ei vasta alati kalendrikuule. | Tunniplaani vaatlus [4] | allikast teadaolev | Kontrollida erinevaid kuupäevavalikuid |
 | 15 | Tunniplaani vaadet ei saa järjehoidjasse lisada, jagada ega uues vahelehes avada. | Tunniplaani vaatlus [4] | allikast teadaolev | – |
-| 16 | Ekraanilugeja käsitleb nuppe linkidena. | Tunniplaani vaatlus | allikast teadaolev | Testida erinevate ekraanilugejatega |
+| 16 | Ekraanilugeja käsitleb nuppe linkidena. | Tunniplaani vaatlus [4] | allikast teadaolev | Testida erinevate ekraanilugejatega |
 | 17 | Lühendite KTD, KVÜ, LO ja RIF tähendused ei ole ilma hiirega vihjet avamata nähtavad. | Tunniplaani vaatlus [4] | allikast teadaolev | – |
 | 18 | Ruumide nimekirjas on segamini füüsilised ruumid, platvormid ja asukohad. | Tunniplaani vaatlus [4] | allikast teadaolev | – |
 | 19 | Ruumide nimetamise loogika on ebaühtlane ja osa nimesid on kärbitud. | Tunniplaani vaatlus [4] | allikast teadaolev | – |
-| 20 | Tunniplaani põhilehel puudub h1-pealkiri ja selge struktuur. | Tunniplaani vaatlus [3] | allikast teadaolev | – |
-| 21 | Start-linkide pildil puudub alt-tekst. | Tunniplaani vaatlus [3], [5] | allikast teadaolev | Kontrollida HTML-i ja ekraanilugejaga |
-| 22 | Tööriistaribal kasutatakse ainult ikoone, ilma tekstiliste siltideta. | Tunniplaani vaatlus [3], [5] | allikast teadaolev | – |
+| 20 | Tunniplaani põhilehel puudub h1-pealkiri ja selge struktuur. | Tunniplaani vaatlus [4], [3] | allikast teadaolev | – |
+| 21 | Start-linkide pildil puudub alt-tekst. | Tunniplaani vaatlus [3], [4], [5] | allikast teadaolev | Kontrollida HTML-i ja ekraanilugejaga |
+| 22 | Tööriistaribal kasutatakse ainult ikoone, ilma tekstiliste siltideta. | Tunniplaani vaatlus [3], [4], [5] | allikast teadaolev | – |
 | 23 | Abiinfo on peidetud title-vihjetesse, mis ilmuvad hiirega liikudes. | Tunniplaani vaatlus [4] | allikast teadaolev | Kontrollida klaviatuuri ja mobiili kasutust |
 | 24 | Teemavahetuse nupp ei ole visuaalselt selgelt nupuna äratuntav. | Tunniplaani vaatlus [4] | allikast teadaolev | – |
 | 25 | Kontrastid ei ole kõikjal paigas. | Tunniplaani vaatlus [3], [4] | allikast teadaolev | – |
@@ -203,6 +203,10 @@ Järgmine samm: koostada prioriseeritud probleemide tabel, kus igale probleemile
 | 30 | Kuuvaade võiks olla Google Calendari laadne. | Kasutaja ettepanek | disainiidee | Testida alternatiivseid kuuvaateid |
 | 31 | Tunni detailvaates võiks olla Moodle'i ja ÕIS-i ainekaardi lingid. | Kasutaja ettepanek | disainiidee | Uurida linkide kätesaadavust |
 | 32 | Tunniplaan võiks toetada Google'i, iOS-i ja Outlooki kalendreid. | Kasutaja ettepanek | disainiidee | Uurida kalendrite integreerimise võimalusi |
+| 33 | Õppur soovib näha tänase päeva tunniplaani kohe lehe avamisel. | AI kavand | eeldus | Kontrollida õppuritega intervjuu või kasutatavustestiga |
+| 34 | Tunniplaani peamine kasutus toimub mobiiltelefonis. | AI kavand | eeldus | Küsida õppuritelt, millist seadet nad tunniplaani vaatamiseks kasutavad |
+| 35 | Järgmise tunni esiletõstmine aitab kasutajal tunniplaanis kiiremini orienteeruda. | AI kavand | eeldus | Testida prototüübiga |
+| 36 | Isikliku tunniplaani salvestamine on õppuritele oluline. | AI kavand | eeldus | Uurida õppurite vajadusi |
 
 ## 5 kõige olulisemat heuristikute analüüsi tähelepanekut
 

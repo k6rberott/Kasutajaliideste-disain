@@ -1,0 +1,1 @@
+AI-d kasutati lähteinfo struktureerimiseks, kasutajate ülesannete sõnastamiseks. AI loodud väited kontrolliti tunniplaani, WAVE-i ja Inspecti abil.
