@@ -2,10 +2,6 @@ Lähteülesanne
 
 Kasuta sisuna Haapsalu Kolledži tunniplaani:
 
-HK tunniplaan
-
-Kuvatõmmis: docs/directions/A_kuvatõmmis.jpg
-
 Rühm: RIF 2
 
 Nädal: 09.11.2026–15.11.2026
@@ -61,3 +57,11 @@ Seejärel loo low fidelity disain.
 Lisa lühike põhjendus, kuidas disain toetab lähteülesande peamist kasutaja vajadust.
 
 Disain peab olema lihtne, realistlik ja vastama täpselt lähteülesandele.
+
+5. Eeldused
+
+Mobiilivaade on sobivaim, sest lähteülesande peamine kasutusolukord on kiire tunniplaani kontroll telefonist.
+
+Tühja asukoha varjamise asemel on selle puudumine kasutajale sõnaselgelt näidatud.
+
+docs/directions/ faile ei muuda.

@@ -3,7 +3,7 @@
 Haapsalu kolledži tunniplaani uus kasutajaliides. Kursuse "Kasutajaliideste disain" projekt.
 
 ## Projekt
-- Tehnoloogia: Node.js + Vite, [Vanilla HTML/CSS/JS | React | Lit]
+- Tehnoloogia: Node.js + Vite, React
 - Käivitamine: `npm install`, `npm run dev`
 - Kood ja stiilid: `src/`, CSS failis `src/styles/`, inline-stiile ei kasuta
 - Kasutajaliidese keel: eesti keel
