@@ -6,6 +6,14 @@ Rakendus on Reacti põhine tunniplaani kasutajaliides, mis võimaldab tunniplaan
 
 Projekti arendamisel on lähtutud mobiilipõhisest disainist, semantilisest HTML-ist ning WCAG 2.2 AA ligipääsetavuse eesmärkidest.
 
+Praegune versioon on mobiilipõhine low-fidelity prototüüp, mis kuvab rühma
+RIF 2 tunnid nädalal 09.–15. november 2026.
+
+Tundide andmed on kontrollitud
+[Haapsalu Kolledži veebitunniplaanist](https://start.hk.tlu.ee/sahtelbeta/tunniplaan/index.php).
+Kui tunni asukohta allikas ei näita, on see kasutajale sõnaselgelt märgitud ja
+puuduvat teavet ei ole oletatud.
+
 ## Tehnoloogiad
 
 | Tehnoloogia | Kasutus |
@@ -19,7 +27,7 @@ Projekti arendamisel on lähtutud mobiilipõhisest disainist, semantilisest HTML
 
 ### Tehnoloogiaraja põhjendus
 
-- **React 18** võimaldab kasutajaliidese jagamist korduvkasutatavateks komponentideks.
+- **React 18** võimaldab tunniplaaniandmeid deklaratiivselt kasutajaliideseks renderdada.
 - **Vite 6** pakub kiiret arenduskeskkonda ja production build'i.
 - **JavaScript ja JSX** võimaldavad rakenduse loogikat ning kasutajaliidest hallata ühes tehnoloogiarajas.
 - **CSS** võimaldab kujundust kontrollida ilma CSS-raamistikuta.
@@ -87,12 +95,6 @@ npm run dev
 npm run build
 ```
 
-### Build'i eelvaade
-
-```bash
-npm run preview
-```
-
 ## Projekti piirangud
 
 Praeguses arendusversioonis ei kasutata:
@@ -103,11 +105,11 @@ Praeguses arendusversioonis ei kasutata:
 - Ruutingut
 - CSS-raamistikku
 
-## Figma
+## Figma Design
 
-Figma Make projekt ja arenduseelvaade:
+Projekti analüüs, kujundussuunad ja prototüübid:
 
-[Lisa siia Figma Make projekti link]
+[Tunniplaan – Indrek](https://www.figma.com/design/BLAGRRcDs6hnZ53Ovv4rfU/Tunniplaan---Indrek?node-id=0-1&t=I8sb4qlR5bFAfP3V-1)
 
 ## AI kasutamine
 
