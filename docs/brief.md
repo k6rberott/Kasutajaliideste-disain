@@ -193,8 +193,9 @@ Järgmine samm: koostada prioriseeritud probleemide tabel, kus igale probleemile
 | 20 | Tunniplaani põhilehel puudub h1-pealkiri ja selge struktuur. | Tunniplaani vaatlus [3] | allikast teadaolev | – |
 | 21 | Start-linkide pildil puudub alt-tekst. | Tunniplaani vaatlus [3], [5] | allikast teadaolev | Kontrollida HTML-i ja ekraanilugejaga |
 | 22 | Tööriistaribal kasutatakse ainult ikoone, ilma tekstiliste siltideta. | Tunniplaani vaatlus [3], [5] | allikast teadaolev | – |
-| 24 | Abiinfo on peidetud title-vihjetesse, mis ilmuvad hiirega liikudes. | Tunniplaani vaatlus | allikast teadaolev | Kontrollida klaviatuuri ja mobiili kasutust |
-| 25 | Teemavahetuse nupp ei ole visuaalselt selgelt nupuna äratuntav. | Tunniplaani vaatlus | allikast teadaolev | – |
+| 23 | Abiinfo on peidetud title-vihjetesse, mis ilmuvad hiirega liikudes. | Tunniplaani vaatlus [4] | allikast teadaolev | Kontrollida klaviatuuri ja mobiili kasutust |
+| 24 | Teemavahetuse nupp ei ole visuaalselt selgelt nupuna äratuntav. | Tunniplaani vaatlus [4] | allikast teadaolev | – |
+| 25 | Kontrastid ei ole kõikjal paigas. | Tunniplaani vaatlus [3], [4] | allikast teadaolev | – |
 | 26 | Tunniplaan võiks sisaldada kodutööde tähtaegu. | Kasutaja ettepanek | disainiidee | Küsida teistelt õppuritelt |
 | 27 | Kodutööde tähtajad võiks olla kasutaja poolt lisatavad. | Kasutaja ettepanek | disainiidee | Uurida vajadust ja tehnilisi võimalusi |
 | 28 | Tunnile vajutades võiks avaneda detailne infoaken. | Kasutaja ettepanek | disainiidee | Testida prototüübiga |
@@ -243,7 +244,7 @@ Järgmine samm: koostada prioriseeritud probleemide tabel, kus igale probleemile
 
    Kasutatud analüüsiks ja kuvatõmmiste tegemiseks. Kuvatõmmised on leitavad koos selgitustega [Figmas](https://www.figma.com/design/BLAGRRcDs6hnZ53Ovv4rfU/Tunniplaan---Indrek?node-id=3-2&t=S3TE8KkLJome9InT-1). Frame-i numbrid on väite numbrid.
 
-5. Haapsalu Kolledži tunniplaan. 
+5. Tallinna Ülikooli Haapsalu kolledži tunniplaan 
    https://start.hk.tlu.ee/sahtelbeta/tunniplaan/index.php
 
    Veebilehe HTML-i, DOM-struktuuri ja elementide atribuutide kontrollimiseks kasutati brauseri arendustööriistu (Inspect / Developer Tools).
