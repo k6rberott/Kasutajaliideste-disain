@@ -17,9 +17,10 @@ See on minu arenev vastus kursuse läbivale küsimusele. Täiendan seda pärast 
 
 Minu olulisemad põhimõtted praegu, tähtsuse järjekorras. Uuenda seda loetelu, kui midagi muutub.
 
-1. See ei tohi silma ja aju ülekoormata
-2. Peab olema intuitiivne
-3. Huvipakkuv
+1. Tea kes on sinu kasutaja 
+2. See ei tohi silma ja aju ülekoormata
+3. Peab olema intuitiivne
+4. Huvipakkuv
 
 ---
 
@@ -39,10 +40,9 @@ Kirjutatud seminari alguses, enne arutelu.
 
 | Mis on oluline | Miks | Kust see tuli |
 |---|---|---|
-| | | seminar / kodutöö / allikas / oma kogemus |
+| Oluline on aru saada, mis on päriselt probleem | Ei ole mõtet lahendada probleemi, mida me veel ei tea. | seminar / kodutöö |
 
-<!-- Järgmiste seminaride jaoks kopeeri sama tabel ja lisa veerg
-     "Kus see minu lahenduses näha on", kui sul on juba lahendus olemas. -->
+<!-- | | | seminar / kodutöö / allikas / oma kogemus | -->
 
 ---
 
@@ -51,3 +51,4 @@ Kirjutatud seminari alguses, enne arutelu.
 | Millal | Mis muutus | Miks |
 |---|---|---|
 |30.10.2026 | Oluline on leida peamine probleem | Vastasel juhul me lahendame probleemi, millest me veel teadlikud ei ole |
+|09.11.2026 | Tunne oma kasutajat | Me ei loo disaini endale |

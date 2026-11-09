@@ -1,6 +1,6 @@
 ## Mis oli selle seminari kõige frustreerivam osa?
 
-Kõikide uute asjade installeerimine. Mul ei ole selles arvutis Figma desktop-i näiteks. 
+Kõikide uute asjade installeerimine. Mul ei ole selles arvutis Figma desktop-i näiteks. Paraku ka süsteemi puudumine, veel.
 
 ## Millised olid minu ootused sellele kursusele ja kuivõrd liiguvad asjad oodatud suunas, nii sisu kui ka kasutatava tehnoloogia osas?
 
