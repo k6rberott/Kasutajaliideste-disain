@@ -38,6 +38,8 @@ Kasuta low fidelity stiili: halltoonid, lihtsad raamid ja plokid, minimaalsed de
 
 Ära kasuta lõplikku visuaalset kujundust, brändivärve ega liigseid detaile.
 
+Lähtu lisatud moodboard'i piltide värvidest, tüpograafiast ja meeleolust.
+
 3. Piirangud
 
 Ära lisa funktsioone, mida lähteülesanne ei nõua.
