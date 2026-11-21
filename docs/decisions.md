@@ -1,3 +1,14 @@
+# Minu enda kirjeldus suuna valiku põhjendamiseks:
+Valisin suuna B, sest näen, et kui TI kasutab minu loodud moodboard'i, liigub disain palju rohkem selles suunas, mida ma ise oma peas ette kujutan. Ka mulle endale on suuna B visuaalne lahendus paremini mõistetav ja silmale meeldivam.
+
+Lisaks tundub Codexi kasutamine ratsionaalsem, kuna see annab mulle Figma kaudu rohkem võimalusi disaini kujundada ja suunata. Figma enda TI-tööriista kasutades pean liiga palju arvestama TI krediitide kuluga, mistõttu jääb katsetamisruumi vähemaks.
+
+Olen enda jaoks avastanud ka teatava hasardi – soovin teada, kas suudan ainult TI-tööriistu kasutades luua valmis tunniplaani rakenduse, mis vastaks nii minu enda kui ka tulevaste kasutajate vajadustele.
+
+Praeguse plaani järgi soovin disainiprotsessi läbi viia Codexi abil ning kasutada koodi loomisel Figma Code Layerit. Nii saan katsetada erinevate TI-tööriistade koostööd ja leida enda jaoks kõige sobivama töövoo.
+
+Loodan, et värvide ja funktsionaalsuse lisamine toob esile rohkem moodboardi olulisust.
+
 # Vestluse olulised otsused ja lahtised küsimused
 
 See dokument koondab tunniplaani prototüübi käigus tehtud otsused. Väited on
