@@ -51,7 +51,7 @@ body {
 
 .schedule-header {
   position: relative;
-  padding-inline-end: calc(var(--space-6) + var(--space-6));
+  padding-inline-end: var(--space-header-end);
   padding-bottom: var(--space-rule);
   border-bottom: var(--size-border) solid var(--color-header-rule);
 }
@@ -84,7 +84,6 @@ body {
 }
 
 .college-name {
-  --color-college-accent: #a4d65e;
   display: flex;
   align-items: center;
   gap: var(--space-2);
@@ -159,22 +158,27 @@ body {
 
 .lesson-card[data-course="HKI5122.HK"] {
   --lesson-course-color: var(--color-course-hki5122);
+  --lesson-tint: var(--color-lesson-tint-hki5122);
 }
 
 .lesson-card[data-course="HKI5120.HK"] {
   --lesson-course-color: var(--color-course-hki5120);
+  --lesson-tint: var(--color-lesson-tint-hki5120);
 }
 
 .lesson-card[data-course="HKI5123.HK"] {
   --lesson-course-color: var(--color-course-hki5123);
+  --lesson-tint: var(--color-lesson-tint-hki5123);
 }
 
 .lesson-card[data-course="HKI5121.HK"] {
   --lesson-course-color: var(--color-course-hki5121);
+  --lesson-tint: var(--color-lesson-tint-hki5121);
 }
 
 .lesson-card[data-course="HKI5060.HK"] {
   --lesson-course-color: var(--color-course-hki5060);
+  --lesson-tint: var(--color-lesson-tint-hki5060);
 }
 
 .lesson-card[data-course] {
@@ -182,7 +186,7 @@ body {
   background-position: left top;
   background-repeat: no-repeat;
   background-size: var(--space-1) 100%;
-  background-color: color-mix(in srgb, var(--color-lesson), var(--lesson-course-color, var(--color-lesson)) 12%);
+  background-color: var(--lesson-tint, var(--color-lesson));
 }
 
 .theme-toggle {
@@ -191,8 +195,8 @@ body {
   inset-inline-end: var(--space-0);
   display: grid;
   place-items: center;
-  inline-size: calc(var(--space-6) + var(--space-4));
-  block-size: calc(var(--space-6) + var(--space-4));
+  inline-size: var(--size-control);
+  block-size: var(--size-control);
   padding: var(--space-0);
   border: var(--size-border) solid var(--color-view-border);
   border-radius: var(--radius-lesson);
@@ -202,8 +206,8 @@ body {
 }
 
 .theme-toggle svg {
-  inline-size: calc(var(--space-4) + var(--space-1));
-  block-size: calc(var(--space-4) + var(--space-1));
+  inline-size: var(--size-icon);
+  block-size: var(--size-icon);
 }
 
 .theme-toggle[aria-pressed="true"] {
@@ -211,7 +215,7 @@ body {
 }
 
 .theme-toggle:focus-visible {
-  outline: calc(var(--size-border) * 2) solid var(--color-theme-focus);
+  outline: var(--size-focus) solid var(--color-theme-focus);
   outline-offset: var(--size-border);
 }
 
@@ -245,7 +249,7 @@ body {
 }
 
 .view-switch button {
-  min-block-size: calc(var(--space-6) + var(--space-4));
+  min-block-size: var(--size-control);
   padding: var(--space-2) var(--space-3);
   border: var(--size-border) solid var(--color-view-border);
   border-radius: var(--radius-lesson);
@@ -262,12 +266,13 @@ body {
 }
 
 .view-switch button:focus-visible {
-  outline: calc(var(--size-border) * 2) solid var(--color-theme-focus);
+  outline: var(--size-focus) solid var(--color-theme-focus);
   outline-offset: var(--size-border);
 }
 
 .lesson-card[data-course="HKM5084.HK"] {
   --lesson-course-color: var(--color-course-hkm5084);
+  --lesson-tint: var(--color-lesson-tint-hkm5084);
 }
 
 .month-days {
@@ -347,7 +352,7 @@ body {
   }
 
   .month-days > .month-empty {
-    min-block-size: calc(var(--space-6) + var(--space-4));
+    min-block-size: var(--size-control);
   }
 
   /* The first November date occupies the Sunday column. */

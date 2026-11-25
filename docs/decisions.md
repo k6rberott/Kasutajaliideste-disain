@@ -173,6 +173,26 @@ käsitsi valimist. Salvestatud valik vähendab korduvaid toiminguid.
 Figma ning CSS-i tokenid. Codex aitas paleti ja teema tehniliselt rakendada.
 
 
+### 10. 2026-11-25 AI kasutamine SUUND B disainisüsteemi loomisel
+
+**Tööriist ja etapid.** Codex aitas Figma ühenduse kaudu siduda värvid,
+tüpograafia ja vahed muutujatega, üles ehitada Auto Layouti, luua komponentide
+variante ning viia samad tokenid CSS-i. Codex aitas kontrollida ka
+teksti kontrasti ning 320 px laiust paigutust.
+
+**Minu otsused ja põhjendused.**
+- Valisin oma moodboard’i põhjal SUUND B ja rohelise visuaalse suuna.
+- Otsustasin kasutada ainevärviribasid, et aineid oleks lihtsam märgata.
+- Otsustasin säilitada nädalavaade avavaatena, sest seal on tunni detailid kohe kättesaadavad.
+- Otsustasin lisada tumeda teema koos teemavahetuse nupuga.
+- Otsustasin seostada päise kolledžiga HK rohelise aktsendiga.
+
+**Parandused minu tagasiside põhjal.** Codexi esimene kuuvaade kasutas
+täissuuruses tunnikaarte. Indrek palus teha kirjed kompaktseks ja täpsustas,
+et seal piisab aine nimest ja kellaajast. Tema tagasiside põhjal joondas
+Codex töölaua veerupäised, lisas mobiilis nädalate eraldusjoone ning paigutas
+UI-kiti komponendid nii, et pealkirjad oleksid nähtavad.
+
 ## Kinnitatud kontroll
 
 - Figma ID `3:4` tähistab lehte [04 Directions](https://www.figma.com/design/BLAGRRcDs6hnZ53Ovv4rfU/Tunniplaan---Indrek?node-id=3-4).

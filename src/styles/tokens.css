@@ -34,6 +34,30 @@
   --primitive-course-teal: #287574;
   --color-course-hkm5084: var(--primitive-course-teal);
   --primitive-dark-course-hkm5084: #86d6d2;
+  --primitive-college-green: #a4d65e;
+  --color-college-accent: var(--primitive-college-green);
+  --space-header-end: 3rem;
+  --size-control: 2.5rem;
+  --size-icon: 1.25rem;
+  --size-focus: 2px;
+  --primitive-light-lesson-tint-hki5122: color-mix(in srgb, var(--primitive-card), var(--primitive-course-sage) 12%);
+  --primitive-dark-lesson-tint-hki5122: color-mix(in srgb, var(--primitive-dark-lesson), var(--primitive-dark-course-hki5122) 12%);
+  --color-lesson-tint-hki5122: var(--primitive-light-lesson-tint-hki5122);
+  --primitive-light-lesson-tint-hki5120: color-mix(in srgb, var(--primitive-card), var(--primitive-course-violet) 12%);
+  --primitive-dark-lesson-tint-hki5120: color-mix(in srgb, var(--primitive-dark-lesson), var(--primitive-dark-course-hki5120) 12%);
+  --color-lesson-tint-hki5120: var(--primitive-light-lesson-tint-hki5120);
+  --primitive-light-lesson-tint-hki5123: color-mix(in srgb, var(--primitive-card), var(--primitive-course-blue) 12%);
+  --primitive-dark-lesson-tint-hki5123: color-mix(in srgb, var(--primitive-dark-lesson), var(--primitive-dark-course-hki5123) 12%);
+  --color-lesson-tint-hki5123: var(--primitive-light-lesson-tint-hki5123);
+  --primitive-light-lesson-tint-hki5121: color-mix(in srgb, var(--primitive-card), var(--primitive-course-ochre) 12%);
+  --primitive-dark-lesson-tint-hki5121: color-mix(in srgb, var(--primitive-dark-lesson), var(--primitive-dark-course-hki5121) 12%);
+  --color-lesson-tint-hki5121: var(--primitive-light-lesson-tint-hki5121);
+  --primitive-light-lesson-tint-hki5060: color-mix(in srgb, var(--primitive-card), var(--primitive-course-rose) 12%);
+  --primitive-dark-lesson-tint-hki5060: color-mix(in srgb, var(--primitive-dark-lesson), var(--primitive-dark-course-hki5060) 12%);
+  --color-lesson-tint-hki5060: var(--primitive-light-lesson-tint-hki5060);
+  --primitive-light-lesson-tint-hkm5084: color-mix(in srgb, var(--primitive-card), var(--primitive-course-teal) 12%);
+  --primitive-dark-lesson-tint-hkm5084: color-mix(in srgb, var(--primitive-dark-lesson), var(--primitive-dark-course-hkm5084) 12%);
+  --color-lesson-tint-hkm5084: var(--primitive-light-lesson-tint-hkm5084);
   --space-0: 0;
   --space-1: 0.25rem;
   --space-2: 0.5rem;
@@ -111,6 +135,12 @@
 
 :root[data-theme="dark"] {
   color-scheme: dark;
+  --color-lesson-tint-hki5122: var(--primitive-dark-lesson-tint-hki5122);
+  --color-lesson-tint-hki5120: var(--primitive-dark-lesson-tint-hki5120);
+  --color-lesson-tint-hki5123: var(--primitive-dark-lesson-tint-hki5123);
+  --color-lesson-tint-hki5121: var(--primitive-dark-lesson-tint-hki5121);
+  --color-lesson-tint-hki5060: var(--primitive-dark-lesson-tint-hki5060);
+  --color-lesson-tint-hkm5084: var(--primitive-dark-lesson-tint-hkm5084);
   --color-course-hkm5084: var(--primitive-dark-course-hkm5084);
   --color-page: var(--primitive-dark-page);
   --color-view: var(--primitive-dark-view);
