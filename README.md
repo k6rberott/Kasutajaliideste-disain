@@ -6,13 +6,14 @@ Rakendus on Reacti põhine tunniplaani kasutajaliides, mis võimaldab tunniplaan
 
 Projekti arendamisel on lähtutud mobiilipõhisest disainist, semantilisest HTML-ist ning WCAG 2.2 AA ligipääsetavuse eesmärkidest.
 
-Praegune versioon on mobiilipõhine low-fidelity prototüüp, mis kuvab rühma
-RIF 2 tunnid nädalal 09.–15. november 2026.
+Praegune versioon on SUUND B prototüüp rühmale RIF 2.
 
-Tundide andmed on kontrollitud
-[Haapsalu Kolledži veebitunniplaanist](https://start.hk.tlu.ee/sahtelbeta/tunniplaan/index.php).
-Kui tunni asukohta allikas ei näita, on see kasutajale sõnaselgelt märgitud ja
-puuduvat teavet ei ole oletatud.
+- **Nädalavaade** avaneb vaikimisi ja kuvab 9.–15. novembri 2026 tunnid koos kellaaja, ainekoodi, õppejõu ja asukohaga.
+- **Kuuvaade** kuvab novembri 2026 tunnid koos kellaaja ja aine nimetusega. Töölaual on seitsmeveeruline kalender, kitsal ekraanil nädalate kaupa eraldatud õppepäevade loend.
+- **Hele ja tume teema** kasutavad samu värvirolle. Esimesel avamisel järgitakse seadme eelistust ning teemavahetuse nupuga tehtud valik salvestatakse brauserisse.
+
+Andmed pärinevad Haapsalu kolledži ametlikust novembri CSV-ekspordist.
+Prototüüp loeb repos olevat andmestikku failist `src/november-schedule.js`. [Ametlik CSV-eksport](https://start.hk.tlu.ee/sahtelbeta/tunniplaan/csv.php?search=01.11.2026/30.11.2026/1/2///)
 
 ## Tehnoloogiad
 
@@ -42,13 +43,12 @@ Rakenduses kasutatakse semantilisi HTML5 elemente, näiteks:
 - `article`
 - `header`
 - `time`
-- `dl`
+- `button`
 
-Kujundus asub failis:
+Kujundus on failis [main.css](src/styles/main.css). Värvid, tüpograafia ja paigutus
+kasutavad [tokens.css](src/styles/tokens.css) muutujaid, mille nimed ja väärtused
+vastavad Figma disainisüsteemile.
 
-`src/styles/main.css`
-
-Inline-stiile ei kasutata.
 
 ## Tööriistad ja taristu
 
@@ -107,9 +107,9 @@ Praeguses arendusversioonis ei kasutata:
 
 ## Figma Design
 
-Projekti analüüs, kujundussuunad ja prototüübid:
-
-[Tunniplaan – Indrek](https://www.figma.com/design/BLAGRRcDs6hnZ53Ovv4rfU/Tunniplaan---Indrek?node-id=0-1&t=I8sb4qlR5bFAfP3V-1)
+- [Tunniplaan – Indrek](https://www.figma.com/design/BLAGRRcDs6hnZ53Ovv4rfU/Tunniplaan---Indrek?node-id=0-1) sisaldab projekti analüüsi, kujundussuundi ja põhivaateid.
+- [SUUND B UI-kit](https://www.figma.com/design/BLAGRRcDs6hnZ53Ovv4rfU/Tunniplaan---Indrek?node-id=383-2) koondab muutujate näidised, tekstistiilid, komponendid ja nende kasutusnäited.
+- [Disainisüsteemi praktiline juhend](docs/design-system-walkthrough.md) selgitab süsteemi ülesehitust ja näitab, kuidas sama töö Figmas ning koodis ise läbi teha.
 
 ## AI kasutamine
 
