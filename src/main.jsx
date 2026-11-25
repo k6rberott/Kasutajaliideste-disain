@@ -55,75 +55,47 @@ const scheduleDays = [
 ];
 
 function App() {
+  const lessonCount = scheduleDays.reduce((total, day) => total + day.lessons.length, 0);
+
   return (
-    <main className="app-shell">
-      <section className="mobile-frame">
-        <header className="mobile-header">
-          <p>Haapsalu kolledž</p>
-          <h1>Tunniplaan</h1>
-          <dl>
-            <div>
-              <dt>Rühm</dt>
-              <dd>RIF 2</dd>
-            </div>
-            <div>
-              <dt>Nädal</dt>
-              <dd>09.–15. november 2026</dd>
-            </div>
-          </dl>
-        </header>
+    <main className="schedule">
+      <header className="schedule-header">
+        <p className="college-name">Haapsalu kolledž</p>
+        <h1>Tunniplaan</h1>
+        <p className="group-name">RIF 2</p>
+        <p className="week-dates">
+          <time dateTime="2026-11-09">09.11.2026</time>–<time dateTime="2026-11-15">15.11.2026</time>
+        </p>
+        <p className="week-summary">46. nädal · {lessonCount} tundi</p>
+      </header>
 
-        <section className="mobile-week" aria-label="46. nädala tunnid">
-          {scheduleDays.map((day) => (
-            <section
-              className="mobile-day"
-              aria-labelledby={`day-${day.date}`}
-              key={day.date}
-            >
-              <header>
-                <h2 id={`day-${day.date}`}>{day.weekday}</h2>
-                <time dateTime={day.date}>{day.displayDate}</time>
-              </header>
+      {scheduleDays.map((day) => (
+        <section className="schedule-day" aria-labelledby={`day-${day.date}`} key={day.date}>
+          <h2 id={`day-${day.date}`}>
+            {day.weekday}, <time dateTime={day.date}>{day.displayDate}</time>
+          </h2>
 
-              <div className="mobile-lessons">
-                {day.lessons.map((lesson) => (
-                  <article
-                    className="mobile-lesson-card"
-                    key={`${day.date}-${lesson.startTime}`}
-                  >
-                    <p className="mobile-lesson-time">
-                      <time dateTime={`${day.date}T${lesson.startTime}`}>
-                        {lesson.startTime}
-                      </time>
-                      <time dateTime={`${day.date}T${lesson.endTime}`}>
-                        {lesson.endTime}
-                      </time>
-                    </p>
-                    <div>
-                      <h3>{lesson.title}</h3>
-                      <p>{lesson.courseCode}</p>
-                      <dl>
-                        <div>
-                          <dt>Õppejõud</dt>
-                          <dd>{lesson.lecturer}</dd>
-                        </div>
-                        <div>
-                          <dt>Asukoht</dt>
-                          <dd>Ei ole allikas näidatud</dd>
-                        </div>
-                      </dl>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </section>
-          ))}
+          <ul className="lesson-list" role="list">
+            {day.lessons.map((lesson) => (
+              <li key={lesson.startTime}>
+                <article className="lesson-card">
+                  <p className="lesson-time">
+                    <time dateTime={`${day.date}T${lesson.startTime}`}>{lesson.startTime}</time>–
+                    <time dateTime={`${day.date}T${lesson.endTime}`}>{lesson.endTime}</time>
+                  </p>
+                  <h3>{lesson.title}</h3>
+                  <p className="course-code">{lesson.courseCode}</p>
+                  <p>Õppejõud: {lesson.lecturer}</p>
+                  <p>Asukoht: Ei ole allikas näidatud</p>
+                </article>
+              </li>
+            ))}
+          </ul>
         </section>
-      </section>
+      ))}
     </main>
   );
 }
-
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <App />
