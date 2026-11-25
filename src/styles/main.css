@@ -84,9 +84,21 @@ body {
 }
 
 .college-name {
+  --color-college-accent: #a4d65e;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
   font-size: var(--font-size-day);
   font-weight: var(--font-bold);
   text-transform: uppercase;
+}
+
+.college-name::before {
+  flex: none;
+  inline-size: var(--space-1);
+  block-size: var(--space-3);
+  background-color: var(--color-college-accent);
+  content: "";
 }
 
 .group-name,
@@ -338,7 +350,18 @@ body {
     min-block-size: calc(var(--space-6) + var(--space-4));
   }
 
+  /* The first November date occupies the Sunday column. */
+  .month-weekdays > :nth-last-child(-n + 2),
+  .month-days > :nth-child(7n),
+  .month-days > :nth-child(7n + 1) {
+    background: var(--color-page);
+  }
+
   .month-days .month-lesson h3,
+  .month-days .month-lesson-time {
+    font-size: var(--font-size-date);
+  }
+
   .month-empty {
     font-size: var(--font-size-caption);
     line-height: var(--font-line-compact);
