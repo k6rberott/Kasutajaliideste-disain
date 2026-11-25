@@ -140,6 +140,23 @@ ning peab selgitama andmete päritolu.
 **Alternatiivid:** lisada `preview` skript ainult README-ga vastavusse viimiseks.
 Seda ei tehtud, sest projekti käivitamist ei olnud vaja muuta.
 
+### 8. 2026-11-25 Ainevärviriba toetab tunni äratundmist
+
+**Otsus:** SUUND B mobiili- ja töölauavaate tunnikaart kasutab vasakus servas
+4 px värviriba. Värv on seotud ainekoodiga ning aine nimi on alati nähtav.
+
+**Põhjus:** riba aitab sama ainet kiiresti märgata. Nimi võimaldab ainet
+tuvastada ka siis, kui värvitoone on raske eristada.
+
+**Alternatiivid:** värvida terve kaart või kasutada ühtset kaardivärvi ilma ribata.
+Kitsas riba säilitab ühetaolise tekstitausta ja annab ainele püsiva värvitähise.
+
+**Allikas ja AI kasutus:** idee pärineb moodboard’i töölaua nädalavaatest.
+Codex aitas valida viis tooni, siduda Figma ja CSS-i tokenid ning dokumenteerida
+tunnikaardi kasutuse UI-kitis. Värvitoonid on kujundusotsus, mille mõju
+tundide leidmisele saab kasutajatestiga hinnata.
+
+
 ## Lahtised küsimused
 
 | Küsimus | Liik | Järgmine samm |
