@@ -222,3 +222,122 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+.view-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.view-switch button {
+  min-block-size: calc(var(--space-6) + var(--space-4));
+  padding: var(--space-2) var(--space-3);
+  border: var(--size-border) solid var(--color-view-border);
+  border-radius: var(--radius-lesson);
+  background: var(--color-view);
+  color: var(--color-text);
+  font: inherit;
+  font-size: var(--font-size-label);
+  cursor: pointer;
+}
+
+.view-switch button[aria-pressed="true"] {
+  background: var(--color-lesson);
+  font-weight: var(--font-bold);
+}
+
+.view-switch button:focus-visible {
+  outline: calc(var(--size-border) * 2) solid var(--color-theme-focus);
+  outline-offset: var(--size-border);
+}
+
+.lesson-card[data-course="HKM5084.HK"] {
+  --lesson-course-color: var(--color-course-hkm5084);
+}
+
+.month-days {
+  display: grid;
+  gap: var(--space-section);
+}
+
+.month-days .lesson-list {
+  gap: var(--space-1);
+}
+
+.month-days .month-lesson {
+  min-block-size: 0;
+  padding: var(--space-1) var(--space-2);
+}
+
+.month-lesson .month-lesson-time {
+  font-weight: var(--font-bold);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.month-lesson h3 {
+  font-size: var(--font-size-day);
+  line-height: var(--font-line-compact);
+}
+
+.month-weekdays,
+.month-empty {
+  display: none;
+}
+
+@media (width < 64rem) {
+  .month-days [data-week-start] {
+    border-block-start: var(--size-border) solid var(--color-header-rule);
+    padding-block-start: var(--space-section);
+  }
+}
+
+@media (min-width: 64rem) {
+  .month-weekdays,
+  .month-days {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: var(--space-1);
+  }
+
+  .month-weekdays {
+    margin-block-end: var(--space-1);
+    font-size: var(--font-size-day);
+    font-weight: var(--font-bold);
+  }
+
+  .month-weekdays > span {
+    padding: var(--space-1) var(--space-2);
+    border: var(--size-border) solid var(--color-lesson-border);
+    border-radius: var(--radius-lesson);
+    background: var(--color-lesson);
+    line-height: var(--font-line-compact);
+    overflow-wrap: anywhere;
+  }
+
+  .month-days > :first-child {
+    grid-column-start: 7;
+  }
+
+  .month-days {
+    align-items: start;
+  }
+
+  .month-days > * {
+    display: grid;
+    align-content: start;
+    padding: var(--space-1);
+    border: var(--size-border) solid var(--color-lesson-border);
+    border-radius: var(--radius-lesson);
+  }
+
+  .month-days > .month-empty {
+    min-block-size: calc(var(--space-6) + var(--space-4));
+  }
+
+  .month-days .month-lesson h3,
+  .month-empty {
+    font-size: var(--font-size-caption);
+    line-height: var(--font-line-compact);
+  }
+}

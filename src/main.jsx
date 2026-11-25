@@ -1,67 +1,37 @@
 import { StrictMode, useLayoutEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
+import { novemberSchedule } from "./november-schedule.js";
 import "./styles/main.css";
 
-const scheduleDays = [
-  {
-    date: "2026-11-12",
-    weekday: "Neljapäev",
-    displayDate: "12. november",
-    lessons: [
-      {
-        startTime: "10:00",
-        endTime: "13:15",
-        title: "Veebiraamistike rakendamine",
-        courseCode: "HKI5122.HK",
-        lecturer: "Juho Kalberg",
-      },
-      {
-        startTime: "14:15",
-        endTime: "17:30",
-        title: "Kasutajaliidese disain",
-        courseCode: "HKI5120.HK",
-        lecturer: "Juho Kalberg",
-      },
-    ],
-  },
-  {
-    date: "2026-11-13",
-    weekday: "Reede",
-    displayDate: "13. november",
-    lessons: [
-      {
-        startTime: "10:00",
-        endTime: "13:15",
-        title: "Tagarakenduste arendamine",
-        courseCode: "HKI5123.HK",
-        lecturer: "Martti Raavel",
-      },
-      {
-        startTime: "14:15",
-        endTime: "17:30",
-        title: "Andmebaasid",
-        courseCode: "HKI5121.HK",
-        lecturer: "Priidu Paomets",
-      },
-      {
-        startTime: "17:30",
-        endTime: "20:00",
-        title: "Videomängude disain",
-        courseCode: "HKI5060.HK",
-        lecturer: "Argo Ilves",
-      },
-    ],
-  },
-];
+const weekSchedule = novemberSchedule.filter(({ date }) => date >= "2026-11-09" && date <= "2026-11-15");
+const monthWeekdays = ["Esmaspäev", "Teisipäev", "Kolmapäev", "Neljapäev", "Reede", "Laupäev", "Pühapäev"];
+const monthDates = Array.from({ length: 30 }, (_, index) => {
+  const day = index + 1;
+  return `2026-11-${String(day).padStart(2, "0")}`;
+});
+const lessonsByDate = new Map(novemberSchedule.map((day) => [day.date, day]));
+function weekStart(date) {
+  const monday = new Date(date);
+  const daysSinceMonday = (monday.getUTCDay() + 6) % 7;
+  monday.setUTCDate(monday.getUTCDate() - daysSinceMonday);
+  return monday.toISOString().slice(0, 10);
+}
 
-function WeekSummary({ lessonCount }) {
+const monthWeekStarts = new Set(novemberSchedule.slice(1).filter((day, index) => (
+  weekStart(day.date) !== weekStart(novemberSchedule[index].date)
+)).map(({ date }) => date));
+
+
+function WeekSummary({ lessonCount, month }) {
   return (
     <div className="week-context">
       <p className="group-name">RIF 2</p>
       <p className="week-dates">
-        <time dateTime="2026-11-09">09.11.2026</time>–<time dateTime="2026-11-15">15.11.2026</time>
+        {month ? <time dateTime="2026-11">November 2026</time> : (
+          <><time dateTime="2026-11-09">09.11.2026</time>–<time dateTime="2026-11-15">15.11.2026</time></>
+        )}
       </p>
-      <p className="week-summary">46. nädal · {lessonCount} tundi</p>
+      <p className="week-summary">{!month && "46. nädal · "}{lessonCount} tundi</p>
     </div>
   );
 }
@@ -99,12 +69,16 @@ function ThemeToggle({ dark, onToggle }) {
   );
 }
 
-function ScheduleHeader({ lessonCount, dark, onToggle }) {
+function ScheduleHeader({ lessonCount, month, onChangeView, dark, onToggle }) {
   return (
     <header className="schedule-header">
       <p className="college-name">Haapsalu kolledž</p>
       <h1>Tunniplaan</h1>
-      <WeekSummary lessonCount={lessonCount} />
+      <WeekSummary lessonCount={lessonCount} month={month} />
+      <div className="view-switch" role="group" aria-label="Tunniplaani vaade">
+        <button type="button" aria-pressed={!month} onClick={() => onChangeView(false)}>Nädal</button>
+        <button type="button" aria-pressed={month} onClick={() => onChangeView(true)}>Kuu</button>
+      </div>
       <ThemeToggle dark={dark} onToggle={onToggle} />
     </header>
   );
@@ -146,7 +120,53 @@ function ScheduleDay({ day }) {
   );
 }
 
+function MonthDay({ day, startsWeek }) {
+  const headingId = `month-day-${day.date}`;
+
+  return (
+    <section className="schedule-day" data-week-start={startsWeek || undefined} aria-labelledby={headingId}>
+      <h2 id={headingId}>
+        {day.weekday}, <time dateTime={day.date}>{day.displayDate}</time>
+      </h2>
+      <ul className="lesson-list" role="list">
+        {day.lessons.map(({ startTime, endTime, title, courseCode }) => (
+          <li className="lesson-card month-lesson" data-course={courseCode} key={startTime}>
+            <p className="month-lesson-time">
+              <time dateTime={`${day.date}T${startTime}`}>{startTime}</time>–
+              <time dateTime={`${day.date}T${endTime}`}>{endTime}</time>
+            </p>
+            <h3>{title}</h3>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+function MonthSchedule() {
+  return (
+    <section className="month-calendar" aria-label="Novembri tunnid">
+      <div className="month-weekdays" aria-hidden="true">
+        {monthWeekdays.map((day) => <span key={day}>{day}</span>)}
+      </div>
+      <div className="month-days">
+        {monthDates.map((date) => {
+          const day = lessonsByDate.get(date);
+          return day ? (
+            <MonthDay key={date} day={day} startsWeek={monthWeekStarts.has(date)} />
+          ) : (
+            <div className="month-empty" key={date}>
+              <time dateTime={date}>{Number(date.slice(-2))}</time>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
 function App() {
+  const [month, setMonth] = useState(false);
   const [selectedTheme, setSelectedTheme] = useState(readTheme);
   const [systemDark, setSystemDark] = useState(() => matchMedia(themePreference).matches);
   const dark = selectedTheme === null ? systemDark : selectedTheme === "dark";
@@ -172,15 +192,18 @@ function App() {
     }
   }
 
-  const lessonCount = scheduleDays.reduce((total, day) => total + day.lessons.length, 0);
+  const visibleSchedule = month ? novemberSchedule : weekSchedule;
+  const lessonCount = visibleSchedule.reduce((total, day) => total + day.lessons.length, 0);
 
   return (
     <div className="schedule-canvas">
       <main className="schedule">
-        <ScheduleHeader lessonCount={lessonCount} dark={dark} onToggle={toggleTheme} />
-        <div className="schedule-days">
-          {scheduleDays.map((day) => <ScheduleDay key={day.date} day={day} />)}
-        </div>
+        <ScheduleHeader lessonCount={lessonCount} month={month} onChangeView={setMonth} dark={dark} onToggle={toggleTheme} />
+        {month ? <MonthSchedule /> : (
+          <div className="schedule-days">
+            {weekSchedule.map((day) => <ScheduleDay key={day.date} day={day} />)}
+          </div>
+        )}
       </main>
     </div>
   );
