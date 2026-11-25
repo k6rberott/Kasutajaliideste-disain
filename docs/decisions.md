@@ -162,6 +162,8 @@ tundide leidmisele saab kasutajatestiga hinnata.
 - Figma ID `3:4` tähistab lehte [04 Directions](https://www.figma.com/design/BLAGRRcDs6hnZ53Ovv4rfU/Tunniplaan---Indrek?node-id=3-4).
 - React kuvab üht SUUND B nädalavaadet, mille paigutus kohandub ekraani laiusega. Edge’i 320 px kontrollis kuvati viis tunnikaarti ja külgkerimist ei tekkinud.
 
+- SUUND B põhivaadete Figma kaadrilaiused jäävad 488 px mobiilis ja 1024 px töölaual. 320 px kasutatakse mobiilivaate paigutuse testiks. Kaadrite kõrgus kohandub sisuga.
+
 ## Lahtised küsimused
 
 | Küsimus | Liik | Järgmine samm |
