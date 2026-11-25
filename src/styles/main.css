@@ -84,6 +84,8 @@ body {
 }
 
 .college-name {
+  font-size: var(--font-size-day);
+  font-weight: var(--font-bold);
   text-transform: uppercase;
 }
 
@@ -168,6 +170,7 @@ body {
   background-position: left top;
   background-repeat: no-repeat;
   background-size: var(--space-1) 100%;
+  background-color: color-mix(in srgb, var(--color-lesson), var(--lesson-course-color, var(--color-lesson)) 12%);
 }
 
 .theme-toggle {
