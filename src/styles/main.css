@@ -140,6 +140,33 @@ body {
   color: var(--color-code);
 }
 
+.lesson-card[data-course="HKI5122.HK"] {
+  --lesson-course-color: var(--color-course-hki5122);
+}
+
+.lesson-card[data-course="HKI5120.HK"] {
+  --lesson-course-color: var(--color-course-hki5120);
+}
+
+.lesson-card[data-course="HKI5123.HK"] {
+  --lesson-course-color: var(--color-course-hki5123);
+}
+
+.lesson-card[data-course="HKI5121.HK"] {
+  --lesson-course-color: var(--color-course-hki5121);
+}
+
+.lesson-card[data-course="HKI5060.HK"] {
+  --lesson-course-color: var(--color-course-hki5060);
+}
+
+.lesson-card[data-course] {
+  background-image: linear-gradient(var(--lesson-course-color, transparent), var(--lesson-course-color, transparent));
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: var(--space-1) 100%;
+}
+
 /* Media queries cannot read custom properties. This matches --size-breakpoint. */
 @media (min-width: 48rem) {
   .schedule-canvas {

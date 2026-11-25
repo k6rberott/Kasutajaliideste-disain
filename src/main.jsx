@@ -80,7 +80,7 @@ function LessonCard({ date, lesson }) {
   const { startTime, endTime, title, courseCode, lecturer, location } = lesson;
 
   return (
-    <article className="lesson-card">
+    <article className="lesson-card" data-course={courseCode}>
       <p className="lesson-time">
         <time dateTime={`${date}T${startTime}`}>{startTime}</time>–
         <time dateTime={`${date}T${endTime}`}>{endTime}</time>
