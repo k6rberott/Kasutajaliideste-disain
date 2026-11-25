@@ -6,9 +6,9 @@ See on minu arenev vastus kursuse läbivale küsimusele. Täiendan seda pärast 
 
 **Nimi: Indrek**
 
-**Projekti repo:**
+**Projekti repo:** [Kasutajaliideste disain](https://github.com/TLUHK-RIF25-Indrek-Luik/Kasutajaliideste-disain/issues/2)
 
-**Figma fail:**
+**Figma fail:** [Figma](https://www.figma.com/design/BLAGRRcDs6hnZ53Ovv4rfU/Tunniplaan---Indrek?node-id=3-4&t=5nijayMYqEXYBJhX-1)
 
 
 ---
@@ -43,7 +43,12 @@ Kirjutatud seminari alguses, enne arutelu.
 | Oluline on aru saada, mis on päriselt probleem | Ei ole mõtet lahendada probleemi, mida me veel ei tea. | seminar / kodutöö |
 
 <!-- | | | seminar / kodutöö / allikas / oma kogemus | -->
+---
 
+## Seminar 2 - kodutöö ajal
+| Mis on oluline | Miks | Kust see tuli |
+|---|---|---|
+| Katsetamine | See aitab aru saada, mis toimib ja mis võib olla mitte | kodutöö |
 ---
 
 ## Mis muutus
@@ -52,3 +57,4 @@ Kirjutatud seminari alguses, enne arutelu.
 |---|---|---|
 |30.10.2026 | Oluline on leida peamine probleem | Vastasel juhul me lahendame probleemi, millest me veel teadlikud ei ole |
 |09.11.2026 | Tunne oma kasutajat | Me ei loo disaini endale |
+|25.11.2026 | Disainiotsused | Erinevate vaadete, värvide, kujunduse katsetamine aitab leida kõige sobivamat |
