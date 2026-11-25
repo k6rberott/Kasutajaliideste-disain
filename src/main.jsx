@@ -54,48 +54,79 @@ const scheduleDays = [
   },
 ];
 
+function WeekSummary({ lessonCount }) {
+  return (
+    <div className="week-context">
+      <p className="group-name">RIF 2</p>
+      <p className="week-dates">
+        <time dateTime="2026-11-09">09.11.2026</time>–<time dateTime="2026-11-15">15.11.2026</time>
+      </p>
+      <p className="week-summary">46. nädal · {lessonCount} tundi</p>
+    </div>
+  );
+}
+
+function ScheduleHeader({ lessonCount }) {
+  return (
+    <header className="schedule-header">
+      <p className="college-name">Haapsalu kolledž</p>
+      <h1>Tunniplaan</h1>
+      <WeekSummary lessonCount={lessonCount} />
+    </header>
+  );
+}
+
+function LessonCard({ date, lesson }) {
+  const { startTime, endTime, title, courseCode, lecturer, location } = lesson;
+
+  return (
+    <article className="lesson-card">
+      <p className="lesson-time">
+        <time dateTime={`${date}T${startTime}`}>{startTime}</time>–
+        <time dateTime={`${date}T${endTime}`}>{endTime}</time>
+      </p>
+      <h3>{title}</h3>
+      <p className="course-code">{courseCode}</p>
+      <p>Õppejõud: {lecturer}</p>
+      <p>Asukoht: {location ?? "Ei ole allikas näidatud"}</p>
+    </article>
+  );
+}
+
+function ScheduleDay({ day }) {
+  const headingId = `day-${day.date}`;
+
+  return (
+    <section className="schedule-day" aria-labelledby={headingId}>
+      <h2 id={headingId}>
+        {day.weekday}, <time dateTime={day.date}>{day.displayDate}</time>
+      </h2>
+      <ul className="lesson-list" role="list">
+        {day.lessons.map((lesson) => (
+          <li key={lesson.startTime}>
+            <LessonCard date={day.date} lesson={lesson} />
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
 function App() {
   const lessonCount = scheduleDays.reduce((total, day) => total + day.lessons.length, 0);
 
   return (
-    <main className="schedule">
-      <header className="schedule-header">
-        <p className="college-name">Haapsalu kolledž</p>
-        <h1>Tunniplaan</h1>
-        <p className="group-name">RIF 2</p>
-        <p className="week-dates">
-          <time dateTime="2026-11-09">09.11.2026</time>–<time dateTime="2026-11-15">15.11.2026</time>
-        </p>
-        <p className="week-summary">46. nädal · {lessonCount} tundi</p>
-      </header>
-
-      {scheduleDays.map((day) => (
-        <section className="schedule-day" aria-labelledby={`day-${day.date}`} key={day.date}>
-          <h2 id={`day-${day.date}`}>
-            {day.weekday}, <time dateTime={day.date}>{day.displayDate}</time>
-          </h2>
-
-          <ul className="lesson-list" role="list">
-            {day.lessons.map((lesson) => (
-              <li key={lesson.startTime}>
-                <article className="lesson-card">
-                  <p className="lesson-time">
-                    <time dateTime={`${day.date}T${lesson.startTime}`}>{lesson.startTime}</time>–
-                    <time dateTime={`${day.date}T${lesson.endTime}`}>{lesson.endTime}</time>
-                  </p>
-                  <h3>{lesson.title}</h3>
-                  <p className="course-code">{lesson.courseCode}</p>
-                  <p>Õppejõud: {lesson.lecturer}</p>
-                  <p>Asukoht: Ei ole allikas näidatud</p>
-                </article>
-              </li>
-            ))}
-          </ul>
-        </section>
-      ))}
-    </main>
+    <div className="schedule-canvas">
+      <main className="schedule">
+        <ScheduleHeader lessonCount={lessonCount} />
+        <div className="schedule-days">
+          {scheduleDays.map((day) => <ScheduleDay key={day.date} day={day} />)}
+        </div>
+      </main>
+    </div>
   );
 }
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <App />

@@ -1,7 +1,10 @@
+@import "./tokens.css";
+
 :root {
-  color: #252525;
-  background: #f3f2ef;
-  font-family: Inter, system-ui, sans-serif;
+  color: var(--color-text);
+  background: var(--color-page);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-weight: var(--font-regular);
 }
 
 * {
@@ -9,25 +12,45 @@
 }
 
 body {
-  margin: 0;
-  padding: 1rem;
+  margin: var(--space-none);
+}
+
+.schedule-canvas {
+  max-width: var(--size-mobile);
+  margin-inline: auto;
+  padding: var(--space-section);
 }
 
 .schedule {
-  max-width: 30.5rem;
-  margin-inline: auto;
-  padding: clamp(1rem, 5vw, 1.4375rem);
-  padding-bottom: 3.8125rem;
-  border: 1px solid #a9a7a2;
-  border-radius: 0.625rem;
-  background: #fcfcfb;
+  display: grid;
+  gap: var(--space-section);
+  padding: var(--space-view);
+  padding-bottom: var(--space-view-end);
+  border: var(--size-border) solid var(--color-view-border);
+  border-radius: var(--radius-view);
+  background: var(--color-view);
+}
+
+.schedule-header,
+.week-context,
+.schedule-days,
+.schedule-day,
+.lesson-list,
+.lesson-card {
+  display: grid;
+  align-content: start;
+  min-width: var(--space-none);
+}
+
+.schedule-header,
+.week-context,
+.lesson-card {
+  gap: var(--space-inline);
 }
 
 .schedule-header {
-  display: grid;
-  gap: 0.25rem;
-  padding-bottom: 0.375rem;
-  border-bottom: 1px solid #c9c7c2;
+  padding-bottom: var(--space-rule);
+  border-bottom: var(--size-border) solid var(--color-header-rule);
 }
 
 .schedule-header p,
@@ -35,85 +58,107 @@ body {
 .schedule-day h2,
 .lesson-card p,
 .lesson-card h3 {
-  margin: 0;
+  margin: var(--space-none);
 }
 
 .schedule-header h1 {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 1.6875rem;
-  font-weight: 400;
-  line-height: 1.2;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: var(--font-size-title);
+  font-weight: var(--font-regular);
+  line-height: var(--font-line-title);
+}
+
+.college-name,
+.week-summary,
+.lesson-card {
+  font-size: var(--font-size-caption);
+  line-height: var(--font-line-compact);
 }
 
 .college-name,
 .week-summary {
-  color: #5b5955;
-  font-size: 0.6875rem;
-  line-height: 1.125rem;
+  color: var(--color-label);
 }
 
 .college-name {
   text-transform: uppercase;
 }
 
-.group-name {
-  font-size: 0.875rem;
-  font-weight: 700;
-  line-height: 1.25rem;
+.group-name,
+.lesson-card h3 {
+  color: var(--color-text);
+  font-size: var(--font-size-label);
+  font-weight: var(--font-bold);
+  line-height: var(--font-line-standard);
 }
 
 .week-dates {
-  color: #55534f;
-  font-size: 0.75rem;
-  line-height: 1.125rem;
+  color: var(--color-date);
+  font-size: var(--font-size-date);
+  line-height: var(--font-line-compact);
+}
+
+.schedule-days {
+  gap: var(--space-section);
 }
 
 .schedule-day {
-  margin-top: 1rem;
+  gap: var(--space-day-heading);
 }
 
 .schedule-day h2 {
-  margin-bottom: 0.4375rem;
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
+  font-size: var(--font-size-day);
+  font-weight: var(--font-bold);
+  line-height: var(--font-line-compact);
 }
 
 .lesson-list {
-  display: grid;
-  gap: 0.5625rem;
-  margin: 0;
-  padding: 0;
+  gap: var(--space-card-gap);
+  margin: var(--space-none);
+  padding: var(--space-none);
   list-style: none;
 }
 
 .lesson-card {
-  display: grid;
-  align-content: start;
-  gap: 0.25rem;
-  min-height: 9.5rem;
-  padding: 0.625rem 0.875rem;
-  border: 1px solid #c0beba;
-  border-radius: 0.25rem;
-  background: #f7f7f5;
-  color: #4f4d49;
-  font-size: 0.6875rem;
-  line-height: 1.125rem;
+  min-height: var(--size-lesson-min);
+  padding: var(--space-card-y) var(--space-card-x);
+  border: var(--size-border) solid var(--color-lesson-border);
+  border-radius: var(--radius-lesson);
+  background: var(--color-lesson);
+  color: var(--color-body);
   overflow-wrap: anywhere;
 }
 
 .lesson-card .lesson-time {
-  color: #252525;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.25rem;
-}
-
-.lesson-card h3 {
-  color: #252525;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  color: var(--color-text);
+  font-size: var(--font-size-time);
+  font-weight: var(--font-bold);
+  line-height: var(--font-line-standard);
 }
 
 .lesson-card .course-code {
-  color: #696762;
+  color: var(--color-code);
+}
+
+/* Media queries cannot read custom properties. This matches --size-breakpoint. */
+@media (min-width: 48rem) {
+  .schedule-canvas {
+    max-width: var(--size-desktop);
+  }
+
+  .schedule-header h1 {
+    font-size: var(--font-size-title-wide);
+    line-height: var(--font-line-title-wide);
+  }
+
+  .week-context {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-section);
+  }
+
+  .schedule-days {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
