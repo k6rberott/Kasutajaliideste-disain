@@ -3,6 +3,7 @@
 :root {
   color: var(--color-text);
   background: var(--color-page);
+  color-scheme: light;
   font-family: var(--font-body), system-ui, sans-serif;
   font-weight: var(--font-regular);
 }
@@ -49,6 +50,8 @@ body {
 }
 
 .schedule-header {
+  position: relative;
+  padding-inline-end: calc(var(--space-6) + var(--space-6));
   padding-bottom: var(--space-rule);
   border-bottom: var(--size-border) solid var(--color-header-rule);
 }
@@ -165,6 +168,36 @@ body {
   background-position: left top;
   background-repeat: no-repeat;
   background-size: var(--space-1) 100%;
+}
+
+.theme-toggle {
+  position: absolute;
+  inset-block-start: var(--space-0);
+  inset-inline-end: var(--space-0);
+  display: grid;
+  place-items: center;
+  inline-size: calc(var(--space-6) + var(--space-4));
+  block-size: calc(var(--space-6) + var(--space-4));
+  padding: var(--space-0);
+  border: var(--size-border) solid var(--color-view-border);
+  border-radius: var(--radius-lesson);
+  background: var(--color-view);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.theme-toggle svg {
+  inline-size: calc(var(--space-4) + var(--space-1));
+  block-size: calc(var(--space-4) + var(--space-1));
+}
+
+.theme-toggle[aria-pressed="true"] {
+  background: var(--color-lesson);
+}
+
+.theme-toggle:focus-visible {
+  outline: calc(var(--size-border) * 2) solid var(--color-theme-focus);
+  outline-offset: var(--size-border);
 }
 
 /* Media queries cannot read custom properties. This matches --size-breakpoint. */

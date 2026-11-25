@@ -157,6 +157,22 @@ tunnikaardi kasutuse UI-kitis. Värvitoonid on kujundusotsus, mille mõju
 tundide leidmisele saab kasutajatestiga hinnata.
 
 
+### 9. 2026-11-25 Tume teema järgib seadme eelistust ja kasutaja valikut
+
+**Otsus** — lisada SUUND B päisesse teemavahetuse nupp. Esimesel avamisel
+järgitakse seadme eelistust. Nupuga tehtud valik salvestatakse brauserisse.
+
+**Põhjus** — vaikimisi sobitub tunniplaan kasutaja seadmega ning nupp võimaldab
+valikut vajaduse korral muuta. Tumedad rohelised pinnad lähtuvad moodboard’i
+paletist. Tekst ja ainevärviribad kasutavad tumeda pinna jaoks heledamaid toone.
+
+**Alternatiivid** — järgida alati seadme eelistust või nõuda igal külastusel
+käsitsi valimist. Salvestatud valik vähendab korduvaid toiminguid.
+
+**Allikas ja AI kasutus** — kasutaja soov, SUUND B moodboard ja olemasolevad
+Figma ning CSS-i tokenid. Codex aitas paleti ja teema tehniliselt rakendada.
+
+
 ## Kinnitatud kontroll
 
 - Figma ID `3:4` tähistab lehte [04 Directions](https://www.figma.com/design/BLAGRRcDs6hnZ53Ovv4rfU/Tunniplaan---Indrek?node-id=3-4).

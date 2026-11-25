@@ -1,4 +1,4 @@
-import { StrictMode } from "react";
+import { StrictMode, useLayoutEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles/main.css";
 
@@ -66,12 +66,46 @@ function WeekSummary({ lessonCount }) {
   );
 }
 
-function ScheduleHeader({ lessonCount }) {
+const themePreference = "(prefers-color-scheme: dark)";
+const themeStorageKey = "schedule-theme";
+
+function readTheme() {
+  try {
+    const saved = localStorage.getItem(themeStorageKey);
+    if (saved === "light" || saved === "dark") return saved;
+  } catch {
+    // The button also works when storage is unavailable.
+  }
+  return null;
+}
+
+function ThemeToggle({ dark, onToggle }) {
+  return (
+    <button
+      type="button"
+      className="theme-toggle"
+      aria-label="Tume teema"
+      aria-pressed={dark}
+      onClick={onToggle}
+    >
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        {dark ? (
+          <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" />
+        ) : (
+          <path d="M20.9 13.35a9 9 0 0 1-10.25-10.25A9 9 0 1 0 20.9 13.35Z" />
+        )}
+      </svg>
+    </button>
+  );
+}
+
+function ScheduleHeader({ lessonCount, dark, onToggle }) {
   return (
     <header className="schedule-header">
       <p className="college-name">Haapsalu kolledž</p>
       <h1>Tunniplaan</h1>
       <WeekSummary lessonCount={lessonCount} />
+      <ThemeToggle dark={dark} onToggle={onToggle} />
     </header>
   );
 }
@@ -113,12 +147,37 @@ function ScheduleDay({ day }) {
 }
 
 function App() {
+  const [selectedTheme, setSelectedTheme] = useState(readTheme);
+  const [systemDark, setSystemDark] = useState(() => matchMedia(themePreference).matches);
+  const dark = selectedTheme === null ? systemDark : selectedTheme === "dark";
+
+  useLayoutEffect(() => {
+    document.documentElement.dataset.theme = dark ? "dark" : "light";
+  }, [dark]);
+
+  useLayoutEffect(() => {
+    const query = matchMedia(themePreference);
+    const update = (event) => setSystemDark(event.matches);
+    query.addEventListener("change", update);
+    return () => query.removeEventListener("change", update);
+  }, []);
+
+  function toggleTheme() {
+    const next = dark ? "light" : "dark";
+    setSelectedTheme(next);
+    try {
+      localStorage.setItem(themeStorageKey, next);
+    } catch {
+      // Keep the selected theme for the current page.
+    }
+  }
+
   const lessonCount = scheduleDays.reduce((total, day) => total + day.lessons.length, 0);
 
   return (
     <div className="schedule-canvas">
       <main className="schedule">
-        <ScheduleHeader lessonCount={lessonCount} />
+        <ScheduleHeader lessonCount={lessonCount} dark={dark} onToggle={toggleTheme} />
         <div className="schedule-days">
           {scheduleDays.map((day) => <ScheduleDay key={day.date} day={day} />)}
         </div>

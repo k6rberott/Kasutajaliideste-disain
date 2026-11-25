@@ -105,3 +105,17 @@ esitatakse kirjeldusloendina. Kui asukohta allikas ei näita, kuvatakse
 - Sisu peab säilima loetavana vähemalt `320px` laiusel ja teksti suurendamisel.
 - Visuaalselt peidetud pealkiri annab nädala sektsioonile ekraanilugeja jaoks
   nimetuse.
+
+## SUUND B teemad
+
+Kehtiv SUUND B kasutab heledat ja tumedat teemat. Mõlema teema
+värvirollid on samad ning semantilised tokenid viitavad kummaski režiimis
+sobivale värviprimitiivile. Figma värvikogumikus on režiimid Light ja Dark.
+CSS-is määrab aktiivse režiimi juurelemendi atribuut `data-theme`.
+
+Esimesel avamisel järgitakse seadme teemaeelistust. Päise nupp „Tume teema”
+vahetab režiimi ja salvestab valiku brauserisse. Nupu olek edastatakse
+`aria-pressed` kaudu ning klaviatuuriga liikudes kuvatakse fookusrõngas.
+
+Kõigi viie aine värviribadel on mõlemas režiimis oma toon.
+Aine nimi jääb alati nähtavaks.
