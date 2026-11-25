@@ -157,16 +157,20 @@ tunnikaardi kasutuse UI-kitis. Värvitoonid on kujundusotsus, mille mõju
 tundide leidmisele saab kasutajatestiga hinnata.
 
 
+## Kinnitatud kontroll
+
+- Figma ID `3:4` tähistab lehte [04 Directions](https://www.figma.com/design/BLAGRRcDs6hnZ53Ovv4rfU/Tunniplaan---Indrek?node-id=3-4).
+- React kuvab üht SUUND B nädalavaadet, mille paigutus kohandub ekraani laiusega. Edge’i 320 px kontrollis kuvati viis tunnikaarti ja külgkerimist ei tekkinud.
+
 ## Lahtised küsimused
 
 | Küsimus | Liik | Järgmine samm |
 |---|---|---|
-| Kas esmane laiem disain on lehel `04 Directions` eraldiseisva native Figma frame'ina olemas? | tehniline kontroll | Avada Figma Designi muutmisõigusega sessioon ja kontrollida lehte. Vestluse Make-sessioonil puudus kirjutusühendus, seega frame'i loomist ei saanud kinnitada. |
-| Kas node `3:4` kuulub kindlasti lehele `04 Directions`? | tehniline kontroll | Kontrollida Figma faili lehestruktuuri; kuvatõmmise põhjal sai kinnitada node'i sisu, mitte lehe nime. |
-| Kas brauseri eelvaade näitab pärast tugevat värskendust ainult viimast vaadet? | tehniline kontroll | Teha eelvaates tugev värskendus. Serveri pakutud lähtekood sisaldas ainult üht `.mobile-frame` elementi. |
+| Kas kaader `326:137` on otsuses nr 2 mainitud esmane laiem kavand? | disainiajalugu | Lehel `04 Directions` asuvad low-fidelity nädalavaade `326:137` ja praegune SUUND B töölauavaade `383:185`. Mõlemad on eraldi muudetavad kaadrid. Kinnitada varasema kirje seos kaadriga `326:137`. |
+| Kas pärast tugevat värskendust kuvatakse sama SUUND B nädalavaade? | tehniline kontroll | Võrrelda lehe sisu enne ja pärast tugevat värskendust mobiili- ja töölaualaiusel. Senine 320 px kontroll hõlmas esmast laadimist. |
 | Kas õppur on õige esmane sihtrühm? | kasutajauuring | Intervjueerida õppureid, õppejõude ja õppekorralduse töötajaid. |
 | Kas mobiil on tunniplaani peamine kasutusseade? | kasutajauuring | Küsida kasutajatelt seadmekasutuse kohta ja testida prototüüpi telefonis. |
 | Kust saada usaldusväärsed ruumi või õppetöö asukoha andmed? | andmed | Uurida tunniplaani teisi vaateid, andmeallikaid või API võimalust. |
-| Kas tunnikaartide eristamiseks on vaja ainepõhiseid värve? | disain | Testida halltoonides ja värvilist varianti; värv ei tohi olla ainus eristamise viis. |
+| Kas ainevärviribad aitavad soovitud tunni kiiremini leida? | kasutatavuse test | Võrrelda sama tunniplaani ribadega ja ribadeta ning mõõta tunni leidmise aega ja eksimusi. Aine nimi jääb mõlemas nähtavaks. |
 | Kas hiljem on vaja detailvaadet, Moodle'i ja ÕIS-i linke või kalendrisse eksporti? | funktsionaalsus | Valideerida vajadused kasutajauuringuga enne funktsioonide lisamist. |
-| Kas README-s peaks Figma Designi lingi kõrval olema eraldi Figma Make'i link? | dokumentatsioon | Lisada link ainult siis, kui õige Make'i URL on teada ja avaldamiseks sobiv. |
+| Kas README-sse on vaja Figma Make’i linki? | dokumentatsioon | Otsustada jagamiseks sobiva Make’i URL-i ja selle kasutusotstarbe põhjal. README viitab praegu Figma Designi failile. |
