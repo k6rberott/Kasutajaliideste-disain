@@ -6,7 +6,7 @@ See on minu arenev vastus kursuse läbivale küsimusele. Täiendan seda pärast 
 
 **Nimi: Indrek**
 
-**Projekti repo:** [Kasutajaliideste disain](https://github.com/TLUHK-RIF25-Indrek-Luik/Kasutajaliideste-disain/issues/2)
+**Projekti repo:** [Kasutajaliideste disain](https://github.com/k6rberott/Kasutajaliideste-disain)
 
 **Figma fail:** [Figma](https://www.figma.com/design/BLAGRRcDs6hnZ53Ovv4rfU/Tunniplaan---Indrek?node-id=3-4&t=5nijayMYqEXYBJhX-1)
 
