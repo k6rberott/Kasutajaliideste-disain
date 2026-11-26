@@ -140,16 +140,75 @@ ning peab selgitama andmete päritolu.
 **Alternatiivid:** lisada `preview` skript ainult README-ga vastavusse viimiseks.
 Seda ei tehtud, sest projekti käivitamist ei olnud vaja muuta.
 
+### 8. 2026-11-25 Ainevärviriba toetab tunni äratundmist
+
+**Otsus:** SUUND B mobiili- ja töölauavaate tunnikaart kasutab vasakus servas
+4 px värviriba. Värv on seotud ainekoodiga ning aine nimi on alati nähtav.
+
+**Põhjus:** riba aitab sama ainet kiiresti märgata. Nimi võimaldab ainet
+tuvastada ka siis, kui värvitoone on raske eristada.
+
+**Alternatiivid:** värvida terve kaart või kasutada ühtset kaardivärvi ilma ribata.
+Kitsas riba säilitab ühetaolise tekstitausta ja annab ainele püsiva värvitähise.
+
+**Allikas ja AI kasutus:** idee pärineb moodboard’i töölaua nädalavaatest.
+Codex aitas valida viis tooni, siduda Figma ja CSS-i tokenid ning dokumenteerida
+tunnikaardi kasutuse UI-kitis. Värvitoonid on kujundusotsus, mille mõju
+tundide leidmisele saab kasutajatestiga hinnata.
+
+
+### 9. 2026-11-25 Tume teema järgib seadme eelistust ja kasutaja valikut
+
+**Otsus** — lisada SUUND B päisesse teemavahetuse nupp. Esimesel avamisel
+järgitakse seadme eelistust. Nupuga tehtud valik salvestatakse brauserisse.
+
+**Põhjus** — vaikimisi sobitub tunniplaan kasutaja seadmega ning nupp võimaldab
+valikut vajaduse korral muuta. Tumedad rohelised pinnad lähtuvad moodboard’i
+paletist. Tekst ja ainevärviribad kasutavad tumeda pinna jaoks heledamaid toone.
+
+**Alternatiivid** — järgida alati seadme eelistust või nõuda igal külastusel
+käsitsi valimist. Salvestatud valik vähendab korduvaid toiminguid.
+
+**Allikas ja AI kasutus** — kasutaja soov, SUUND B moodboard ja olemasolevad
+Figma ning CSS-i tokenid. Codex aitas paleti ja teema tehniliselt rakendada.
+
+
+### 10. 2026-11-25 AI kasutamine SUUND B disainisüsteemi loomisel
+
+**Tööriist ja etapid.** Codex aitas Figma ühenduse kaudu siduda värvid,
+tüpograafia ja vahed muutujatega, üles ehitada Auto Layouti, luua komponentide
+variante ning viia samad tokenid CSS-i. Codex aitas kontrollida ka
+teksti kontrasti ning 320 px laiust paigutust.
+
+**Minu otsused ja põhjendused.**
+- Valisin oma moodboard’i põhjal SUUND B ja rohelise visuaalse suuna.
+- Otsustasin kasutada ainevärviribasid, et aineid oleks lihtsam märgata.
+- Otsustasin säilitada nädalavaade avavaatena, sest seal on tunni detailid kohe kättesaadavad.
+- Otsustasin lisada tumeda teema koos teemavahetuse nupuga.
+- Otsustasin seostada päise kolledžiga HK rohelise aktsendiga.
+
+**Parandused minu tagasiside põhjal.** Codexi esimene kuuvaade kasutas
+täissuuruses tunnikaarte. Indrek palus teha kirjed kompaktseks ja täpsustas,
+et seal piisab aine nimest ja kellaajast. Tema tagasiside põhjal joondas
+Codex töölaua veerupäised, lisas mobiilis nädalate eraldusjoone ning paigutas
+UI-kiti komponendid nii, et pealkirjad oleksid nähtavad.
+
+## Kinnitatud kontroll
+
+- Figma ID `3:4` tähistab lehte [04 Directions](https://www.figma.com/design/BLAGRRcDs6hnZ53Ovv4rfU/Tunniplaan---Indrek?node-id=3-4).
+- React kuvab üht SUUND B nädalavaadet, mille paigutus kohandub ekraani laiusega. Edge’i 320 px kontrollis kuvati viis tunnikaarti ja külgkerimist ei tekkinud.
+
+- SUUND B põhivaadete Figma kaadrilaiused jäävad 488 px mobiilis ja 1024 px töölaual. 320 px kasutatakse mobiilivaate paigutuse testiks. Kaadrite kõrgus kohandub sisuga.
+
 ## Lahtised küsimused
 
 | Küsimus | Liik | Järgmine samm |
 |---|---|---|
-| Kas esmane laiem disain on lehel `04 Directions` eraldiseisva native Figma frame'ina olemas? | tehniline kontroll | Avada Figma Designi muutmisõigusega sessioon ja kontrollida lehte. Vestluse Make-sessioonil puudus kirjutusühendus, seega frame'i loomist ei saanud kinnitada. |
-| Kas node `3:4` kuulub kindlasti lehele `04 Directions`? | tehniline kontroll | Kontrollida Figma faili lehestruktuuri; kuvatõmmise põhjal sai kinnitada node'i sisu, mitte lehe nime. |
-| Kas brauseri eelvaade näitab pärast tugevat värskendust ainult viimast vaadet? | tehniline kontroll | Teha eelvaates tugev värskendus. Serveri pakutud lähtekood sisaldas ainult üht `.mobile-frame` elementi. |
+| Kas kaader `326:137` on otsuses nr 2 mainitud esmane laiem kavand? | disainiajalugu | Lehel `04 Directions` asuvad low-fidelity nädalavaade `326:137` ja praegune SUUND B töölauavaade `383:185`. Mõlemad on eraldi muudetavad kaadrid. Kinnitada varasema kirje seos kaadriga `326:137`. |
+| Kas pärast tugevat värskendust kuvatakse sama SUUND B nädalavaade? | tehniline kontroll | Võrrelda lehe sisu enne ja pärast tugevat värskendust mobiili- ja töölaualaiusel. Senine 320 px kontroll hõlmas esmast laadimist. |
 | Kas õppur on õige esmane sihtrühm? | kasutajauuring | Intervjueerida õppureid, õppejõude ja õppekorralduse töötajaid. |
 | Kas mobiil on tunniplaani peamine kasutusseade? | kasutajauuring | Küsida kasutajatelt seadmekasutuse kohta ja testida prototüüpi telefonis. |
 | Kust saada usaldusväärsed ruumi või õppetöö asukoha andmed? | andmed | Uurida tunniplaani teisi vaateid, andmeallikaid või API võimalust. |
-| Kas tunnikaartide eristamiseks on vaja ainepõhiseid värve? | disain | Testida halltoonides ja värvilist varianti; värv ei tohi olla ainus eristamise viis. |
+| Kas ainevärviribad aitavad soovitud tunni kiiremini leida? | kasutatavuse test | Võrrelda sama tunniplaani ribadega ja ribadeta ning mõõta tunni leidmise aega ja eksimusi. Aine nimi jääb mõlemas nähtavaks. |
 | Kas hiljem on vaja detailvaadet, Moodle'i ja ÕIS-i linke või kalendrisse eksporti? | funktsionaalsus | Valideerida vajadused kasutajauuringuga enne funktsioonide lisamist. |
-| Kas README-s peaks Figma Designi lingi kõrval olema eraldi Figma Make'i link? | dokumentatsioon | Lisada link ainult siis, kui õige Make'i URL on teada ja avaldamiseks sobiv. |
+| Kas README-sse on vaja Figma Make’i linki? | dokumentatsioon | Otsustada jagamiseks sobiva Make’i URL-i ja selle kasutusotstarbe põhjal. README viitab praegu Figma Designi failile. |
